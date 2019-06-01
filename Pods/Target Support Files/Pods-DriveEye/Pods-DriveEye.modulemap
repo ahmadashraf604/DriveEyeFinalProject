@@ -1,0 +1,6 @@
+framework module Pods_DriveEye {
+  umbrella header "Pods-DriveEye-umbrella.h"
+
+  export *
+  module * { export * }
+}
