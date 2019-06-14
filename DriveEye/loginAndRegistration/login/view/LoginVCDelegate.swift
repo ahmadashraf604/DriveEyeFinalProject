@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+protocol LoginVCProtocol: NSObjectProtocol {
+    func showAlert(msg: String)
+}

@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+protocol RegisterVCProtocol: NSObjectProtocol {
+    func showAlert(msg: String)
+}

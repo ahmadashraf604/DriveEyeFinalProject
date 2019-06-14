@@ -73,7 +73,7 @@ FlBhc3N3b3JkA
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="loginWithEmail:" destination="DOY-66-c6C" eventType="touchUpInside" id="in4-5N-PyQ"/>
+                                                            <action selector="loginWithEmail:" destination="DOY-66-c6C" eventType="touchUpInside" id="b4g-BH-PnL"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bK0-vH-XGM">
@@ -84,7 +84,7 @@ FlBhc3N3b3JkA
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="register:" destination="DOY-66-c6C" eventType="touchUpInside" id="gYY-HW-tr4"/>
+                                                            <action selector="register:" destination="DOY-66-c6C" eventType="touchUpInside" id="XQP-As-HX5"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -107,7 +107,7 @@ FlBhc3N3b3JkA
                                                             <color key="titleColor" red="0.15180776793793982" green="0.086705359075790023" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="loginWithFacebook:" destination="DOY-66-c6C" eventType="touchUpInside" id="hfI-dj-LnY"/>
+                                                            <action selector="loginWithFacebook:" destination="DOY-66-c6C" eventType="touchUpInside" id="uaJ-Of-vly"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -140,22 +140,22 @@ FlBhc3N3b3JkA
                         <viewLayoutGuide key="safeArea" id="WK0-BN-XYT"/>
                     </view>
                     <connections>
-                        <outlet property="btnFacebook" destination="Ahu-HU-d6N" id="PEu-gZ-Hx6"/>
-                        <outlet property="btnLogin" destination="8S6-q7-E53" id="nq8-zR-WuJ"/>
-                        <outlet property="btnRegister" destination="bK0-vH-XGM" id="gV2-Pr-Qe8"/>
-                        <outlet property="scrollView" destination="SU5-31-61T" id="a4w-Cd-Cpa"/>
-                        <outlet property="tfEmail" destination="8C0-M8-4g9" id="ZGh-4e-vk6"/>
-                        <outlet property="tfPassword" destination="6Qx-9d-0NG" id="i9r-aV-9lx"/>
+                        <outlet property="btnFacebook" destination="Ahu-HU-d6N" id="G9Y-k8-2Vh"/>
+                        <outlet property="btnLogin" destination="8S6-q7-E53" id="Pft-FJ-Ahr"/>
+                        <outlet property="btnRegister" destination="bK0-vH-XGM" id="Kbh-oD-XXN"/>
+                        <outlet property="scrollView" destination="SU5-31-61T" id="lhX-W0-rKI"/>
+                        <outlet property="tfEmail" destination="8C0-M8-4g9" id="BZs-Ja-HQT"/>
+                        <outlet property="tfPassword" destination="6Qx-9d-0NG" id="0MH-8K-caw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ygs-jy-yFh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1015.2" y="-2410.344827586207"/>
         </scene>
-        <!--Registration View Controller-->
+        <!--Register View Controller-->
         <scene sceneID="y17-Gt-pFu">
             <objects>
-                <viewController id="uev-e4-v0R" customClass="RegistrationViewController" customModule="DriveEye" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="uev-e4-v0R" customClass="RegisterViewController" customModule="DriveEye" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mf0-pq-krW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -266,6 +266,9 @@ FlBhc3N3b3JkA
                                                 <state key="normal" title="Next">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="btnNext:" destination="uev-e4-v0R" eventType="touchUpInside" id="XlJ-UV-HFt"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2wc-aW-Xke">
                                                 <rect key="frame" x="27" y="724" width="47.5" height="20.5"/>
@@ -287,7 +290,7 @@ FlBhc3N3b3JkA
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="selectCity:" destination="uev-e4-v0R" eventType="touchUpInside" id="wcy-nz-Qe0"/>
+                                                            <action selector="btnSelectCityAction:" destination="uev-e4-v0R" eventType="touchUpInside" id="dxk-2K-fvz"/>
                                                         </connections>
                                                     </button>
                                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5Av-HR-AYJ">
@@ -316,8 +319,8 @@ FlBhc3N3b3JkA
                                                             </tableViewCell>
                                                         </prototypes>
                                                         <connections>
-                                                            <outlet property="dataSource" destination="uev-e4-v0R" id="lrZ-wM-Vyr"/>
-                                                            <outlet property="delegate" destination="uev-e4-v0R" id="fXD-6V-vxe"/>
+                                                            <outlet property="dataSource" destination="uev-e4-v0R" id="eRZ-DK-zHx"/>
+                                                            <outlet property="delegate" destination="uev-e4-v0R" id="c4a-H8-StP"/>
                                                         </connections>
                                                     </tableView>
                                                 </subviews>
@@ -373,10 +376,6 @@ FlBhc3N3b3JkA
                         <viewLayoutGuide key="safeArea" id="mix-Rd-A5K"/>
                     </view>
                     <size key="freeformSize" width="375" height="1000"/>
-                    <connections>
-                        <outlet property="btnSelectCity" destination="Ovp-Qj-Ppj" id="uVT-oU-0wT"/>
-                        <outlet property="tableViewCities" destination="5Av-HR-AYJ" id="vWH-xJ-RhD"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CKS-jg-Zg5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
