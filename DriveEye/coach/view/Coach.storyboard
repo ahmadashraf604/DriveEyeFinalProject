@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Coach Table View Controller-->
+        <!--Coaching-->
         <scene sceneID="b25-el-Slx">
             <objects>
                 <tableViewController id="pAn-Lk-qw7" customClass="CoachTableViewController" customModule="DriveEye" customModuleProvider="target" sceneMemberID="viewController">
@@ -48,6 +48,8 @@
                             <outlet property="delegate" destination="pAn-Lk-qw7" id="W7m-YL-2GW"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Coaching" id="4Fa-P0-cBh"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qj3-MY-GwV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

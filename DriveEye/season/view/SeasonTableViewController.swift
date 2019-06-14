@@ -29,18 +29,19 @@ class SeasonTableViewController: UITableViewController , SeasonViewProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.splitViewController?.preferredDisplayMode = .primaryOverlay
         seasonsPresenter = SeasonsPresenter(seasonViewProtocol: self)
         seasonsPresenter.getSeasonList()
-        
-        
         
         if let split = splitViewController {
             let controllers = split.viewControllers
             seasonDeatailsViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? SeasonDetailsViewController
         }
     }
-    
-    // MARK: - Table view data source
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.splitViewController?.preferredDisplayMode = .automatic
+    }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
