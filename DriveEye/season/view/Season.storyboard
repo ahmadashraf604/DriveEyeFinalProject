@@ -271,10 +271,10 @@
             </objects>
             <point key="canvasLocation" x="1867" y="-533"/>
         </scene>
-        <!--Split View Controller-->
+        <!--Season Split View Controller-->
         <scene sceneID="CTl-GW-zSh">
             <objects>
-                <splitViewController id="vqw-IK-w6Y" sceneMemberID="viewController">
+                <splitViewController id="vqw-IK-w6Y" customClass="SeasonSplitViewController" customModule="DriveEye" customModuleProvider="target" sceneMemberID="viewController">
                     <connections>
                         <segue destination="dRb-V8-zVT" kind="relationship" relationship="masterViewController" id="Zka-00-weX"/>
                         <segue destination="cPz-3J-E8F" kind="relationship" relationship="detailViewController" id="HE7-ar-CwC"/>

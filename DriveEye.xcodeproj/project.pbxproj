@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A1B53124CE8826AD54C43701 /* Pods_DriveEyeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DDC6EAF60C140A42C0D8DDF /* Pods_DriveEyeTests.framework */; };
 		B75F60E62E8F737037993EDA /* Pods_DriveEyeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 931A32646AF10CEAF3DEFC0C /* Pods_DriveEyeUITests.framework */; };
+		DC46BE2622B41D8B0071E567 /* SeasonSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC46BE2522B41D8B0071E567 /* SeasonSplitViewController.swift */; };
 		DC79C39722A2D35300E4590A /* AlertServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC79C39322A2D35200E4590A /* AlertServices.swift */; };
 		DC79C39822A2D35300E4590A /* AlertStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC79C39422A2D35200E4590A /* AlertStoryboard.storyboard */; };
 		DC79C39922A2D35300E4590A /* AlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC79C39522A2D35200E4590A /* AlertVC.swift */; };
@@ -98,6 +99,7 @@
 		AA8EAF5455F66618A1C1A44C /* Pods_DriveEye.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DriveEye.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBD01247F36D25AAC7E3DEFC /* Pods-DriveEyeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DriveEyeUITests.release.xcconfig"; path = "Target Support Files/Pods-DriveEyeUITests/Pods-DriveEyeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C093C66AF528C824BB62795C /* Pods-DriveEye.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DriveEye.release.xcconfig"; path = "Target Support Files/Pods-DriveEye/Pods-DriveEye.release.xcconfig"; sourceTree = "<group>"; };
+		DC46BE2522B41D8B0071E567 /* SeasonSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonSplitViewController.swift; sourceTree = "<group>"; };
 		DC79C39322A2D35200E4590A /* AlertServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertServices.swift; sourceTree = "<group>"; };
 		DC79C39422A2D35200E4590A /* AlertStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AlertStoryboard.storyboard; sourceTree = "<group>"; };
 		DC79C39522A2D35200E4590A /* AlertVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertVC.swift; sourceTree = "<group>"; };
@@ -493,6 +495,7 @@
 				DC974F4F22A2CD65009993C9 /* SeasonTableViewController.swift */,
 				DC974F5022A2CD65009993C9 /* UserSeasonTableViewCell.swift */,
 				DC974F6422A2CE33009993C9 /* Season.storyboard */,
+				DC46BE2522B41D8B0071E567 /* SeasonSplitViewController.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -771,6 +774,7 @@
 				DC974F5722A2CD65009993C9 /* SeasonUser.swift in Sources */,
 				DC80132922A2BD12001FE9CB /* LeagueAlertViewController.swift in Sources */,
 				DC80131522A2BB0E001FE9CB /* League.swift in Sources */,
+				DC46BE2622B41D8B0071E567 /* SeasonSplitViewController.swift in Sources */,
 				DC8FBA4722A2FB0900973FF5 /* Trip.swift in Sources */,
 				DC974F5322A2CD65009993C9 /* ErrorResponse.swift in Sources */,
 				DC80132522A2BC44001FE9CB /* LeagueDetailsPresenter.swift in Sources */,
