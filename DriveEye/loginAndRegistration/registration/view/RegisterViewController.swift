@@ -8,28 +8,35 @@
 
 import UIKit
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: UIViewController, RegisterVCProtocol{
+    func showAlert(msg: String) {
+        
+    }
+    
+    
+    
+    let presenter = RegistrationPresenter(userModel: UserModel())
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter.setVCDelegate(vcDelegate: self)
 
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func loadCitiesFromWebService() -> [String] {
+        return []
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func btnSelectCityAction(_ sender: Any) {
+        
     }
-    */
-
+    
+    
+    @IBAction func btnNext(_ sender: Any) {
+        
+    }
+    
 }

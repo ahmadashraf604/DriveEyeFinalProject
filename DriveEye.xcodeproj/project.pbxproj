@@ -8,6 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		A1B53124CE8826AD54C43701 /* Pods_DriveEyeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DDC6EAF60C140A42C0D8DDF /* Pods_DriveEyeTests.framework */; };
+		A33CE27522B3DCA700454E71 /* LoginAndRegistraion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A33CE27422B3DCA700454E71 /* LoginAndRegistraion.storyboard */; };
+		A34249B222B3FD1300FA24F9 /* RegistrationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34249B122B3FD1300FA24F9 /* RegistrationPresenter.swift */; };
+		A34249B422B413FC00FA24F9 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34249B322B413FC00FA24F9 /* Utils.swift */; };
+		A34249B622B4147A00FA24F9 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34249B522B4147A00FA24F9 /* RegisterViewController.swift */; };
+		A34249B822B416AB00FA24F9 /* LoginVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34249B722B416AB00FA24F9 /* LoginVCDelegate.swift */; };
+		A34249BA22B4170000FA24F9 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34249B922B4170000FA24F9 /* LoginPresenter.swift */; };
+		A34249BC22B4175000FA24F9 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34249BB22B4175000FA24F9 /* UserModel.swift */; };
+		A34249BE22B4181900FA24F9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34249BD22B4181900FA24F9 /* User.swift */; };
+		A34249C022B4186C00FA24F9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34249BF22B4186C00FA24F9 /* LoginViewController.swift */; };
+		A34249C422B419D600FA24F9 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = A34249C322B419D500FA24F9 /* logo.png */; };
+		A3937D0322B3F89000F5C1E4 /* RegisterVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3937D0222B3F89000F5C1E4 /* RegisterVCDelegate.swift */; };
 		B75F60E62E8F737037993EDA /* Pods_DriveEyeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 931A32646AF10CEAF3DEFC0C /* Pods_DriveEyeUITests.framework */; };
 		DC79C39722A2D35300E4590A /* AlertServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC79C39322A2D35200E4590A /* AlertServices.swift */; };
 		DC79C39822A2D35300E4590A /* AlertStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC79C39422A2D35200E4590A /* AlertStoryboard.storyboard */; };
@@ -95,6 +106,17 @@
 		4E9A4A90E2E8406D9E262BD9 /* Pods-DriveEyeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DriveEyeTests.release.xcconfig"; path = "Target Support Files/Pods-DriveEyeTests/Pods-DriveEyeTests.release.xcconfig"; sourceTree = "<group>"; };
 		931A32646AF10CEAF3DEFC0C /* Pods_DriveEyeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DriveEyeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1DF6D3A4BCBF48F4472DCCA /* Pods-DriveEyeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DriveEyeTests.debug.xcconfig"; path = "Target Support Files/Pods-DriveEyeTests/Pods-DriveEyeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A33CE27422B3DCA700454E71 /* LoginAndRegistraion.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginAndRegistraion.storyboard; sourceTree = "<group>"; };
+		A34249B122B3FD1300FA24F9 /* RegistrationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPresenter.swift; sourceTree = "<group>"; };
+		A34249B322B413FC00FA24F9 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		A34249B522B4147A00FA24F9 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		A34249B722B416AB00FA24F9 /* LoginVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVCDelegate.swift; sourceTree = "<group>"; };
+		A34249B922B4170000FA24F9 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		A34249BB22B4175000FA24F9 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		A34249BD22B4181900FA24F9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A34249BF22B4186C00FA24F9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A34249C322B419D500FA24F9 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		A3937D0222B3F89000F5C1E4 /* RegisterVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVCDelegate.swift; sourceTree = "<group>"; };
 		AA8EAF5455F66618A1C1A44C /* Pods_DriveEye.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DriveEye.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBD01247F36D25AAC7E3DEFC /* Pods-DriveEyeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DriveEyeUITests.release.xcconfig"; path = "Target Support Files/Pods-DriveEyeUITests/Pods-DriveEyeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C093C66AF528C824BB62795C /* Pods-DriveEye.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DriveEye.release.xcconfig"; path = "Target Support Files/Pods-DriveEye/Pods-DriveEye.release.xcconfig"; sourceTree = "<group>"; };
@@ -197,6 +219,104 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A33CE26E22B3DAD300454E71 /* loginAndRegistration */ = {
+			isa = PBXGroup;
+			children = (
+				A3937CFC22B3E16D00F5C1E4 /* storyboard */,
+				A3937CF622B3E0DC00F5C1E4 /* utils */,
+				A33CE27022B3DB9300454E71 /* registration */,
+				A33CE26F22B3DB8900454E71 /* login */,
+			);
+			path = loginAndRegistration;
+			sourceTree = "<group>";
+		};
+		A33CE26F22B3DB8900454E71 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				A33CE27322B3DC1900454E71 /* view */,
+				A33CE27222B3DC0F00454E71 /* presenter */,
+				A33CE27122B3DC0500454E71 /* model */,
+			);
+			path = login;
+			sourceTree = "<group>";
+		};
+		A33CE27022B3DB9300454E71 /* registration */ = {
+			isa = PBXGroup;
+			children = (
+				A3937CFB22B3E12900F5C1E4 /* presenter */,
+				A3937CFA22B3E10E00F5C1E4 /* view */,
+				A3937CF922B3E10800F5C1E4 /* model */,
+			);
+			path = registration;
+			sourceTree = "<group>";
+		};
+		A33CE27122B3DC0500454E71 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				A34249BB22B4175000FA24F9 /* UserModel.swift */,
+				A34249BD22B4181900FA24F9 /* User.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		A33CE27222B3DC0F00454E71 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				A34249B922B4170000FA24F9 /* LoginPresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		A33CE27322B3DC1900454E71 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				A34249C322B419D500FA24F9 /* logo.png */,
+				A34249B722B416AB00FA24F9 /* LoginVCDelegate.swift */,
+				A34249BF22B4186C00FA24F9 /* LoginViewController.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		A3937CF622B3E0DC00F5C1E4 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				A34249B322B413FC00FA24F9 /* Utils.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		A3937CF922B3E10800F5C1E4 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		A3937CFA22B3E10E00F5C1E4 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				A3937D0222B3F89000F5C1E4 /* RegisterVCDelegate.swift */,
+				A34249B522B4147A00FA24F9 /* RegisterViewController.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		A3937CFB22B3E12900F5C1E4 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				A34249B122B3FD1300FA24F9 /* RegistrationPresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		A3937CFC22B3E16D00F5C1E4 /* storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				A33CE27422B3DCA700454E71 /* LoginAndRegistraion.storyboard */,
+			);
+			path = storyboard;
+			sourceTree = "<group>";
+		};
 		C2FD647788252A491DC865EC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -251,6 +371,7 @@
 		DC8012D122A2B89C001FE9CB /* DriveEye */ = {
 			isa = PBXGroup;
 			children = (
+				A33CE26E22B3DAD300454E71 /* loginAndRegistration */,
 				DC8FBA3C22A2FA6900973FF5 /* home */,
 				DC8FBA2C22A2F8B800973FF5 /* coach */,
 				DC79C39122A2D35200E4590A /* customViews */,
@@ -631,10 +752,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC8012E022A2B89C001FE9CB /* LaunchScreen.storyboard in Resources */,
+				A33CE27522B3DCA700454E71 /* LoginAndRegistraion.storyboard in Resources */,
 				DC79C39822A2D35300E4590A /* AlertStoryboard.storyboard in Resources */,
 				DC8FBA4B22A2FB4600973FF5 /* HomeStoryboard.storyboard in Resources */,
 				DC8012DD22A2B89C001FE9CB /* Assets.xcassets in Resources */,
 				DC974F6522A2CE33009993C9 /* Season.storyboard in Resources */,
+				A34249C422B419D600FA24F9 /* logo.png in Resources */,
 				DC8012D822A2B89C001FE9CB /* Main.storyboard in Resources */,
 				DC80134822A2C3CC001FE9CB /* League.storyboard in Resources */,
 				DC8FBA3622A2F90300973FF5 /* Coach.storyboard in Resources */,
@@ -738,6 +861,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC79C39A22A2D35300E4590A /* UIButtonExtention.swift in Sources */,
+				A34249B622B4147A00FA24F9 /* RegisterViewController.swift in Sources */,
+				A34249B222B3FD1300FA24F9 /* RegistrationPresenter.swift in Sources */,
 				DC80131B22A2BB63001FE9CB /* LeaguePostResponse.swift in Sources */,
 				DC8FBA3522A2F90300973FF5 /* CoachTVCell.swift in Sources */,
 				DC8FBA4922A2FB2200973FF5 /* HomeView.swift in Sources */,
@@ -756,16 +881,21 @@
 				DC974F6022A2CD65009993C9 /* SeasonDetailsViewController.swift in Sources */,
 				DC8FBA3122A2F8F300973FF5 /* CoachRespose.swift in Sources */,
 				DC974F5222A2CD65009993C9 /* SeasonModel.swift in Sources */,
+				A34249B822B416AB00FA24F9 /* LoginVCDelegate.swift in Sources */,
 				DC974F6222A2CD65009993C9 /* SeasonTableViewController.swift in Sources */,
 				DC974F5522A2CD65009993C9 /* Season.swift in Sources */,
 				DC8FBA4322A2FAE500973FF5 /* HomeViewProtocol.swift in Sources */,
+				A34249BE22B4181900FA24F9 /* User.swift in Sources */,
 				DC80132D22A2BD91001FE9CB /* LeagueTableViewCell.swift in Sources */,
 				DC974F5E22A2CD65009993C9 /* SeasonViewProtocol.swift in Sources */,
 				DC8FBA4122A2FAD200973FF5 /* HomeModelIMP.swift in Sources */,
+				A3937D0322B3F89000F5C1E4 /* RegisterVCDelegate.swift in Sources */,
 				DC8FBA3B22A2F9CE00973FF5 /* CoachPresenter.swift in Sources */,
 				DC80132B22A2BD5A001FE9CB /* LeagueDetailsViewController.swift in Sources */,
 				DC80131922A2BB48001FE9CB /* LeaguePostErrorResponse.swift in Sources */,
+				A34249BC22B4175000FA24F9 /* UserModel.swift in Sources */,
 				DC80132722A2BC71001FE9CB /* LeaguePresenter.swift in Sources */,
+				A34249B422B413FC00FA24F9 /* Utils.swift in Sources */,
 				DC79C39922A2D35300E4590A /* AlertVC.swift in Sources */,
 				DC80132F22A2BDDF001FE9CB /* LeagueViewController.swift in Sources */,
 				DC974F5722A2CD65009993C9 /* SeasonUser.swift in Sources */,
@@ -774,9 +904,11 @@
 				DC8FBA4722A2FB0900973FF5 /* Trip.swift in Sources */,
 				DC974F5322A2CD65009993C9 /* ErrorResponse.swift in Sources */,
 				DC80132522A2BC44001FE9CB /* LeagueDetailsPresenter.swift in Sources */,
+				A34249BA22B4170000FA24F9 /* LoginPresenter.swift in Sources */,
 				DC80131D22A2BB8F001FE9CB /* LeagueResponse.swift in Sources */,
 				DC974F5A22A2CD65009993C9 /* SeasonDetailsPresenter.swift in Sources */,
 				DC974F5822A2CD65009993C9 /* SeasonUsersResponse.swift in Sources */,
+				A34249C022B4186C00FA24F9 /* LoginViewController.swift in Sources */,
 				DC8012DB22A2B89C001FE9CB /* DriveEye.xcdatamodeld in Sources */,
 				DC974F5D22A2CD65009993C9 /* SeasonDetailsViewProtocol.swift in Sources */,
 				DC8FBA3922A2F9AD00973FF5 /* CoachModelIMP.swift in Sources */,
