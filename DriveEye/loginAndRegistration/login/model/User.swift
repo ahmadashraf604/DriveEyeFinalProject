@@ -1,5 +1,5 @@
 //
-//  RegistrationPresenter.swift
+//  User.swift
 //  DriveEye
 //
 //  Created by Sallam on 6/14/19.
