@@ -9,6 +9,14 @@
 import UIKit
 
 class LoginViewController: UIViewController, LoginVCProtocol {
+    func goToHomeScreen() {
+        let homeScreen = UIStoryboard(name: "HomeStoryboard", bundle: nil)
+        
+        let vc = homeScreen.instantiateInitialViewController()
+        
+        self.present(vc!, animated: true, completion: nil)
+    }
+    
     
     func showAlert(msg: String) {
         
