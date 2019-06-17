@@ -15,18 +15,18 @@ import Foundation
 import Foundation
 
 // MARK: - User
-struct User: Codable {
+struct UserResponse: Codable {
     let status: Bool
-    let response: Response
+    let response: User
 }
 
 // MARK: - Response
-struct Response: Codable {
-    let userID: Int
-    let firstName, lastName, email, birthdate: String
-    let level: Int
-    let image: JSONNull?
-    let cityID: CityID
+struct User: Codable {
+    var userID: Int
+    var firstName, lastName, email, birthdate: String
+    var level: Int
+    var image: JSONNull?
+    var cityID: CityID
     
     enum CodingKeys: String, CodingKey {
         case userID = "userId"
