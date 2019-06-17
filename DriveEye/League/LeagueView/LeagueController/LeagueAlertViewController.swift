@@ -10,6 +10,7 @@ import UIKit
 
 class LeagueAlertViewController: UIViewController, LeagueAlertDelegate {
     
+    @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var actionBtn: UIButton!
     @IBOutlet weak var leagueDetailLabel: UILabel!
@@ -22,6 +23,7 @@ class LeagueAlertViewController: UIViewController, LeagueAlertDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter = LeagueAlertPresenter(leagueVC: self)
+        stackView.addBackground(color: .red)
     }
     
     override func viewWillAppear(_ animated: Bool) {

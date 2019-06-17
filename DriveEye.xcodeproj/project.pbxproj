@@ -20,6 +20,7 @@
 		A34249C422B419D600FA24F9 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = A34249C322B419D500FA24F9 /* logo.png */; };
 		A3937D0322B3F89000F5C1E4 /* RegisterVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3937D0222B3F89000F5C1E4 /* RegisterVCDelegate.swift */; };
 		B75F60E62E8F737037993EDA /* Pods_DriveEyeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 931A32646AF10CEAF3DEFC0C /* Pods_DriveEyeUITests.framework */; };
+		DC4B604F22B78F2A006EC7ED /* UIStackViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4B604E22B78F2A006EC7ED /* UIStackViewExtention.swift */; };
 		DC79C39722A2D35300E4590A /* AlertServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC79C39322A2D35200E4590A /* AlertServices.swift */; };
 		DC79C39822A2D35300E4590A /* AlertStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC79C39422A2D35200E4590A /* AlertStoryboard.storyboard */; };
 		DC79C39922A2D35300E4590A /* AlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC79C39522A2D35200E4590A /* AlertVC.swift */; };
@@ -120,6 +121,7 @@
 		AA8EAF5455F66618A1C1A44C /* Pods_DriveEye.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DriveEye.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBD01247F36D25AAC7E3DEFC /* Pods-DriveEyeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DriveEyeUITests.release.xcconfig"; path = "Target Support Files/Pods-DriveEyeUITests/Pods-DriveEyeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C093C66AF528C824BB62795C /* Pods-DriveEye.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DriveEye.release.xcconfig"; path = "Target Support Files/Pods-DriveEye/Pods-DriveEye.release.xcconfig"; sourceTree = "<group>"; };
+		DC4B604E22B78F2A006EC7ED /* UIStackViewExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackViewExtention.swift; sourceTree = "<group>"; };
 		DC79C39322A2D35200E4590A /* AlertServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertServices.swift; sourceTree = "<group>"; };
 		DC79C39422A2D35200E4590A /* AlertStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AlertStoryboard.storyboard; sourceTree = "<group>"; };
 		DC79C39522A2D35200E4590A /* AlertVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertVC.swift; sourceTree = "<group>"; };
@@ -332,6 +334,7 @@
 			children = (
 				DC79C39222A2D35200E4590A /* alert */,
 				DC79C39622A2D35200E4590A /* UIButtonExtention.swift */,
+				DC4B604E22B78F2A006EC7ED /* UIStackViewExtention.swift */,
 			);
 			path = customViews;
 			sourceTree = "<group>";
@@ -888,6 +891,7 @@
 				A34249BE22B4181900FA24F9 /* User.swift in Sources */,
 				DC80132D22A2BD91001FE9CB /* LeagueTableViewCell.swift in Sources */,
 				DC974F5E22A2CD65009993C9 /* SeasonViewProtocol.swift in Sources */,
+				DC4B604F22B78F2A006EC7ED /* UIStackViewExtention.swift in Sources */,
 				DC8FBA4122A2FAD200973FF5 /* HomeModelIMP.swift in Sources */,
 				A3937D0322B3F89000F5C1E4 /* RegisterVCDelegate.swift in Sources */,
 				DC8FBA3B22A2F9CE00973FF5 /* CoachPresenter.swift in Sources */,
