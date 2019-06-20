@@ -10,6 +10,12 @@ import UIKit
 
 class LoginViewController: UIViewController, LoginVCProtocol {
     
+    func goToHomeScreen() {
+        let homeScreen = UIStoryboard(name: "HomeStoryboard", bundle: nil)
+        let vc = homeScreen.instantiateInitialViewController()
+        self.present(vc!, animated: true, completion: nil)
+    }
+    
     func showAlert(msg: String) {
         
         let alert = UIAlertController(title: "Oops!", message: msg, preferredStyle: UIAlertControllerStyle.alert)
@@ -22,7 +28,6 @@ class LoginViewController: UIViewController, LoginVCProtocol {
         
         self.present(alert, animated: true, completion: nil)
     }
-    
     
     let presenter = LoginPresenter(userModel: UserModel())
     
