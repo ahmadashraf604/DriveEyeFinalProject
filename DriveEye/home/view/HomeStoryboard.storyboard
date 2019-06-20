@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="96c-0D-Vk1">
-                                <rect key="frame" x="147.5" y="314" width="80" height="39"/>
+                                <rect key="frame" x="147" y="550" width="80" height="39"/>
                                 <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="start trip">
@@ -30,22 +30,64 @@
                                     <action selector="startTribAction:" destination="tUB-07-EPd" eventType="touchUpInside" id="Jgu-SG-8sV"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4G-zZ-ew8">
+                                <rect key="frame" x="179" y="510" width="17" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wgh-Wm-QHu">
+                                <rect key="frame" x="33" y="29" width="43" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="seson number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsd-Q3-WSH">
+                                <rect key="frame" x="0.0" y="96" width="109" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="day left" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vqv-Ng-yh8">
+                                <rect key="frame" x="33" y="166" width="57" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="level" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhT-en-P7d">
+                                <rect key="frame" x="33" y="249" width="35" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.29640631070000001" green="0.74392206549999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="96c-0D-Vk1" firstAttribute="centerX" secondItem="vLm-mk-XuH" secondAttribute="centerX" id="BPO-14-2ac"/>
-                            <constraint firstItem="96c-0D-Vk1" firstAttribute="centerY" secondItem="vLm-mk-XuH" secondAttribute="centerY" id="TcQ-cn-6o4"/>
+                            <constraint firstItem="a4G-zZ-ew8" firstAttribute="centerX" secondItem="YkC-XW-A0M" secondAttribute="centerX" id="9DG-Rw-oPV"/>
+                            <constraint firstItem="96c-0D-Vk1" firstAttribute="top" secondItem="a4G-zZ-ew8" secondAttribute="bottom" constant="16" id="XFQ-ND-eSP"/>
+                            <constraint firstItem="YkC-XW-A0M" firstAttribute="bottom" secondItem="96c-0D-Vk1" secondAttribute="bottom" constant="29" id="YHU-ys-2kt"/>
+                            <constraint firstItem="96c-0D-Vk1" firstAttribute="centerX" secondItem="YkC-XW-A0M" secondAttribute="centerX" id="t2q-7p-yzr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YkC-XW-A0M"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" id="8ir-hs-3iT"/>
                     <connections>
                         <outlet property="btnStartTrip" destination="96c-0D-Vk1" id="YoB-SN-LBM"/>
+                        <outlet property="daysLeftLBL" destination="Vqv-Ng-yh8" id="WvE-li-Rdu"/>
+                        <outlet property="leveLBL" destination="lhT-en-P7d" id="wAK-Cy-umS"/>
+                        <outlet property="scoreLBL" destination="wgh-Wm-QHu" id="a0X-pW-28C"/>
+                        <outlet property="sesonNumberLBL" destination="hsd-Q3-WSH" id="uts-BS-Wnc"/>
+                        <outlet property="timeLBL" destination="a4G-zZ-ew8" id="lVm-rZ-9Ac"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i8M-bO-mJ1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1321" y="58"/>
+            <point key="canvasLocation" x="1320.8" y="57.121439280359823"/>
         </scene>
         <!--League-->
         <scene sceneID="7Cv-kz-VqT">

@@ -12,7 +12,7 @@ import Alamofire
 class LeagueModel {
     
     private let baseUrl = "https://driveeye.herokuapp.com/"
-    private let subscribed = "userLeague/subscribed/1"
+    private let subscribed = "userLeague/subscribed/2"
     private let userLeague = "userLeague/getUsers/"
     private let addLeague = "league/add"
     private let joinLeague = "userLeague/join/"

@@ -1,9 +1,17 @@
-//
-//  HomeRespons.swift
-//  DriveEye
-//
-//  Created by ashraf on 6/19/19.
-//  Copyright © 2019 java. All rights reserved.
-//
-
 import Foundation
+
+// MARK: - Home
+struct HomeResponce: Codable {
+    let status: Bool
+    let home: Home
+   private enum CodingKeys: String, CodingKey {
+        case status
+        case home = "response"
+    }
+}
+
+// MARK: - Response
+struct Home: Codable {
+    let score, daysLeft, userLevel, seasonNUmber: Int
+    
+}
