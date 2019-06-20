@@ -50,7 +50,7 @@ class RegistrationPresenter {
     }
     
     func addCarToUser(userId: Int, carInfo: Car) {
-        userModel.addCar(userId: userId, carInfo: carInfo)
+//        userModel.addCar(userId: userId, carInfo: carInfo)
     }
     
 }
