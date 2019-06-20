@@ -29,6 +29,7 @@ class LoginPresenter {
                     //if login succeeded
                     Utils.saveCurrentUserId(userID: (user?.response.userID)!)
                     //TODO: go to the home page transfereing the user object with you
+                    self.LoginVCDelegate?.goToHomeScreen()
                 } else {
                     self.LoginVCDelegate?.showAlert(msg: "Invalid email or password")
                 }

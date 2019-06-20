@@ -20,6 +20,7 @@
 		A34249C422B419D600FA24F9 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = A34249C322B419D500FA24F9 /* logo.png */; };
 		A3937D0322B3F89000F5C1E4 /* RegisterVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3937D0222B3F89000F5C1E4 /* RegisterVCDelegate.swift */; };
 		B75F60E62E8F737037993EDA /* Pods_DriveEyeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 931A32646AF10CEAF3DEFC0C /* Pods_DriveEyeUITests.framework */; };
+		DC46BE2622B41D8B0071E567 /* SeasonSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC46BE2522B41D8B0071E567 /* SeasonSplitViewController.swift */; };
 		DC4B604F22B78F2A006EC7ED /* UIStackViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4B604E22B78F2A006EC7ED /* UIStackViewExtention.swift */; };
 		DC79C39722A2D35300E4590A /* AlertServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC79C39322A2D35200E4590A /* AlertServices.swift */; };
 		DC79C39822A2D35300E4590A /* AlertStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC79C39422A2D35200E4590A /* AlertStoryboard.storyboard */; };
@@ -82,6 +83,7 @@
 		DC974F6222A2CD65009993C9 /* SeasonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC974F4F22A2CD65009993C9 /* SeasonTableViewController.swift */; };
 		DC974F6322A2CD65009993C9 /* UserSeasonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC974F5022A2CD65009993C9 /* UserSeasonTableViewCell.swift */; };
 		DC974F6522A2CE33009993C9 /* Season.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC974F6422A2CE33009993C9 /* Season.storyboard */; };
+		DCD4492722B7C93900241A9A /* CustomMenueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD4492622B7C93900241A9A /* CustomMenueViewController.swift */; };
 		FFC171A1D3E81335E916DEDA /* Pods_DriveEye.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA8EAF5455F66618A1C1A44C /* Pods_DriveEye.framework */; };
 /* End PBXBuildFile section */
 
@@ -121,6 +123,7 @@
 		AA8EAF5455F66618A1C1A44C /* Pods_DriveEye.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DriveEye.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBD01247F36D25AAC7E3DEFC /* Pods-DriveEyeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DriveEyeUITests.release.xcconfig"; path = "Target Support Files/Pods-DriveEyeUITests/Pods-DriveEyeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C093C66AF528C824BB62795C /* Pods-DriveEye.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DriveEye.release.xcconfig"; path = "Target Support Files/Pods-DriveEye/Pods-DriveEye.release.xcconfig"; sourceTree = "<group>"; };
+		DC46BE2522B41D8B0071E567 /* SeasonSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonSplitViewController.swift; sourceTree = "<group>"; };
 		DC4B604E22B78F2A006EC7ED /* UIStackViewExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackViewExtention.swift; sourceTree = "<group>"; };
 		DC79C39322A2D35200E4590A /* AlertServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertServices.swift; sourceTree = "<group>"; };
 		DC79C39422A2D35200E4590A /* AlertStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AlertStoryboard.storyboard; sourceTree = "<group>"; };
@@ -189,6 +192,7 @@
 		DC974F4F22A2CD65009993C9 /* SeasonTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeasonTableViewController.swift; sourceTree = "<group>"; };
 		DC974F5022A2CD65009993C9 /* UserSeasonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSeasonTableViewCell.swift; sourceTree = "<group>"; };
 		DC974F6422A2CE33009993C9 /* Season.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Season.storyboard; sourceTree = "<group>"; };
+		DCD4492622B7C93900241A9A /* CustomMenueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMenueViewController.swift; sourceTree = "<group>"; };
 		EA9135C45A2EAFF8B2DB04D6 /* Pods-DriveEyeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DriveEyeUITests.debug.xcconfig"; path = "Target Support Files/Pods-DriveEyeUITests/Pods-DriveEyeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F11C0BE70B89DAE1B42A453F /* Pods-DriveEye.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DriveEye.debug.xcconfig"; path = "Target Support Files/Pods-DriveEye/Pods-DriveEye.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -436,6 +440,7 @@
 				DC80132A22A2BD5A001FE9CB /* LeagueDetailsViewController.swift */,
 				DC80132C22A2BD91001FE9CB /* LeagueTableViewCell.swift */,
 				DC80132E22A2BDDF001FE9CB /* LeagueViewController.swift */,
+				DCD4492622B7C93900241A9A /* CustomMenueViewController.swift */,
 			);
 			path = LeagueController;
 			sourceTree = "<group>";
@@ -617,6 +622,7 @@
 				DC974F4F22A2CD65009993C9 /* SeasonTableViewController.swift */,
 				DC974F5022A2CD65009993C9 /* UserSeasonTableViewCell.swift */,
 				DC974F6422A2CE33009993C9 /* Season.storyboard */,
+				DC46BE2522B41D8B0071E567 /* SeasonSplitViewController.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -894,6 +900,7 @@
 				DC4B604F22B78F2A006EC7ED /* UIStackViewExtention.swift in Sources */,
 				DC8FBA4122A2FAD200973FF5 /* HomeModelIMP.swift in Sources */,
 				A3937D0322B3F89000F5C1E4 /* RegisterVCDelegate.swift in Sources */,
+				DCD4492722B7C93900241A9A /* CustomMenueViewController.swift in Sources */,
 				DC8FBA3B22A2F9CE00973FF5 /* CoachPresenter.swift in Sources */,
 				DC80132B22A2BD5A001FE9CB /* LeagueDetailsViewController.swift in Sources */,
 				DC80131922A2BB48001FE9CB /* LeaguePostErrorResponse.swift in Sources */,
@@ -905,6 +912,7 @@
 				DC974F5722A2CD65009993C9 /* SeasonUser.swift in Sources */,
 				DC80132922A2BD12001FE9CB /* LeagueAlertViewController.swift in Sources */,
 				DC80131522A2BB0E001FE9CB /* League.swift in Sources */,
+				DC46BE2622B41D8B0071E567 /* SeasonSplitViewController.swift in Sources */,
 				DC8FBA4722A2FB0900973FF5 /* Trip.swift in Sources */,
 				DC974F5322A2CD65009993C9 /* ErrorResponse.swift in Sources */,
 				DC80132522A2BC44001FE9CB /* LeagueDetailsPresenter.swift in Sources */,

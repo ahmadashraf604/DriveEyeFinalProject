@@ -23,7 +23,7 @@ class LeagueAlertViewController: UIViewController, LeagueAlertDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter = LeagueAlertPresenter(leagueVC: self)
-        stackView.addBackground(color: .red)
+        stackView.addBackground(color: .white)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,6 +32,13 @@ class LeagueAlertViewController: UIViewController, LeagueAlertDelegate {
             self.setLabelText(labelText: "Add", type: "Name")
         case .join:
             self.setLabelText(labelText: "Join", type: "Code")
+        }
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        if let fittedSize = stackView?.sizeThatFits(UILayoutFittingCompressedSize){
+            preferredContentSize = CGSize(width: fittedSize.width + 20, height: fittedSize.height + 20)
         }
     }
     
