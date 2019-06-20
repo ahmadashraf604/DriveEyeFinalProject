@@ -20,9 +20,13 @@ class LeagueModel {
     func getLeagues(responseHandel: @escaping ([League]) -> Void){
         Alamofire.request(baseUrl + subscribed).responseJSON { (responseObject) -> Void in
             if responseObject.result.isSuccess {
-                let leagueResponse = try! JSONDecoder().decode(LeagueResponse.self, from: responseObject.data!)
-                if leagueResponse.status {
-                    responseHandel(leagueResponse.leagues)
+                do{
+                    let leagueResponse = try JSONDecoder().decode(LeagueResponse.self, from: responseObject.data!)
+                    if leagueResponse.status {
+                        responseHandel(leagueResponse.leagues)
+                    }
+                }catch{
+                    print("no data found")
                 }
             }
         }
