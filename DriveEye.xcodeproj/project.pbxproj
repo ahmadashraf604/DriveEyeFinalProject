@@ -26,6 +26,8 @@
 		B75F60E62E8F737037993EDA /* Pods_DriveEyeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 931A32646AF10CEAF3DEFC0C /* Pods_DriveEyeUITests.framework */; };
 		DC406E5822BCF65900F05C4B /* emptyCollection.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC406E5722BCF65900F05C4B /* emptyCollection.xib */; };
 		DC406E5B22BCFC6400F05C4B /* EmptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC406E5A22BCFC6400F05C4B /* EmptyViewController.swift */; };
+		DC36A3D522BA8938008B46F5 /* HomeRespons.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC36A3D422BA8938008B46F5 /* HomeRespons.swift */; };
+		DC36A3D822BBAFD0008B46F5 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC36A3D722BBAFD0008B46F5 /* Spinner.swift */; };
 		DC46BE2622B41D8B0071E567 /* SeasonSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC46BE2522B41D8B0071E567 /* SeasonSplitViewController.swift */; };
 		DC4B604F22B78F2A006EC7ED /* UIStackViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4B604E22B78F2A006EC7ED /* UIStackViewExtention.swift */; };
 		DC79C39722A2D35300E4590A /* AlertServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC79C39322A2D35200E4590A /* AlertServices.swift */; };
@@ -135,6 +137,8 @@
 		C093C66AF528C824BB62795C /* Pods-DriveEye.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DriveEye.release.xcconfig"; path = "Target Support Files/Pods-DriveEye/Pods-DriveEye.release.xcconfig"; sourceTree = "<group>"; };
 		DC406E5722BCF65900F05C4B /* emptyCollection.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = emptyCollection.xib; sourceTree = "<group>"; };
 		DC406E5A22BCFC6400F05C4B /* EmptyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViewController.swift; sourceTree = "<group>"; };
+		DC36A3D422BA8938008B46F5 /* HomeRespons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRespons.swift; sourceTree = "<group>"; };
+		DC36A3D722BBAFD0008B46F5 /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
 		DC46BE2522B41D8B0071E567 /* SeasonSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonSplitViewController.swift; sourceTree = "<group>"; };
 		DC4B604E22B78F2A006EC7ED /* UIStackViewExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackViewExtention.swift; sourceTree = "<group>"; };
 		DC79C39322A2D35200E4590A /* AlertServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertServices.swift; sourceTree = "<group>"; };
@@ -358,6 +362,14 @@
 			path = empty;
 			sourceTree = "<group>";
 		};
+		DC36A3D622BBAFA7008B46F5 /* utility */ = {
+			isa = PBXGroup;
+			children = (
+				DC36A3D722BBAFD0008B46F5 /* Spinner.swift */,
+			);
+			path = utility;
+			sourceTree = "<group>";
+		};
 		DC79C39122A2D35200E4590A /* customViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -404,9 +416,10 @@
 		DC8012D122A2B89C001FE9CB /* DriveEye */ = {
 			isa = PBXGroup;
 			children = (
+				DC36A3D622BBAFA7008B46F5 /* utility */,
+				DC8FBA2C22A2F8B800973FF5 /* coach */,
 				A33CE26E22B3DAD300454E71 /* loginAndRegistration */,
 				DC8FBA3C22A2FA6900973FF5 /* home */,
-				DC8FBA2C22A2F8B800973FF5 /* coach */,
 				DC79C39122A2D35200E4590A /* customViews */,
 				DC974F3822A2CD65009993C9 /* season */,
 				DC80130522A2B910001FE9CB /* League */,
@@ -575,6 +588,7 @@
 				DC8FBA4622A2FB0800973FF5 /* Trip.swift */,
 				DC8FBA4422A2FAF400973FF5 /* LocationService.swift */,
 				DC8FBA4022A2FAD200973FF5 /* HomeModelIMP.swift */,
+				DC36A3D422BA8938008B46F5 /* HomeRespons.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -906,6 +920,7 @@
 				DC80131F22A2BBA6001FE9CB /* UserLeague.swift in Sources */,
 				DC80132122A2BBE3001FE9CB /* ActionEnum.swift in Sources */,
 				DC974F5122A2CD65009993C9 /* SeasonDetailsModel.swift in Sources */,
+				DC36A3D822BBAFD0008B46F5 /* Spinner.swift in Sources */,
 				DC974F6322A2CD65009993C9 /* UserSeasonTableViewCell.swift in Sources */,
 				DC974F6122A2CD65009993C9 /* SeasonTableViewCell.swift in Sources */,
 				DC974F5C22A2CD65009993C9 /* SeasonNetworkData.swift in Sources */,
@@ -960,6 +975,7 @@
 				DC80130B22A2BA30001FE9CB /* LeagueAlertDelegate.swift in Sources */,
 				DC8FBA4D22A2FB5400973FF5 /* HomePresenter.swift in Sources */,
 				DC80131722A2BB2A001FE9CB /* LeagueDetailsResponse.swift in Sources */,
+				DC36A3D522BA8938008B46F5 /* HomeRespons.swift in Sources */,
 				DC8012D322A2B89C001FE9CB /* AppDelegate.swift in Sources */,
 				DC80131222A2BAB8001FE9CB /* LeagueModel.swift in Sources */,
 				DC80130D22A2BA58001FE9CB /* LeagueDelegate.swift in Sources */,

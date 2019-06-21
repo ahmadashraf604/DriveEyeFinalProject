@@ -21,14 +21,19 @@ class SeasonNetworkData{
     }
     
     func getSeasonList(responseHandel: @escaping ([Season]) -> Void,errorHandel: @escaping (ErrorResponse) -> Void){
-        Alamofire.request(baseUrl + seasons + String(/*me.userId*/1)).responseJSON { (responseObject) -> Void in
+        Alamofire.request(baseUrl + seasons + String(Utils.getCurrentUserId())).responseJSON { (responseObject) -> Void in
             if responseObject.result.isSuccess {
                 do{
+                    print(responseObject)
                     let seasonResponse = try JSONDecoder().decode(SeasonResponse.self, from: responseObject.data!)
                     responseHandel(seasonResponse.seasons)
-                }catch{		
-                    let response = try! JSONDecoder().decode(ErrorResponse.self, from: responseObject.data!)
-                    errorHandel(response)
+                }catch{
+                    do{
+                        let response = try JSONDecoder().decode(ErrorResponse.self, from: responseObject.data!)
+                        errorHandel(response)
+                    }catch{
+                        print("Server Error")
+                    }
                 }
             }
         }
@@ -42,8 +47,12 @@ class SeasonNetworkData{
                     responseHandel(seasonUsersResponse.seasonUsers)
                     
                 }catch{
-                    let response = try! JSONDecoder().decode(ErrorResponse.self, from: responseObject.data!)
+                    do{
+                    let response = try JSONDecoder().decode(ErrorResponse.self, from: responseObject.data!)
                     errorHandel(response)
+                }catch{
+                    print("Server Error")
+                }
                 }
             }
         }

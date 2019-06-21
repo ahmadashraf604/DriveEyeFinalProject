@@ -48,7 +48,7 @@
                             <outlet property="delegate" destination="pAn-Lk-qw7" id="W7m-YL-2GW"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Coaching" id="4Fa-P0-cBh"/>
+                    <tabBarItem key="tabBarItem" title="Coaching" image="coach" id="4Fa-P0-cBh"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qj3-MY-GwV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -56,4 +56,7 @@
             <point key="canvasLocation" x="-87" y="9"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="coach" width="30" height="30"/>
+    </resources>
 </document>

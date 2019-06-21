@@ -11,29 +11,28 @@ import CoreLocation
 
 class LocationService: NSObject ,CLLocationManagerDelegate {
     let locationManager = CLLocationManager()
-    func getCityAndCountry() {
+    
+    var countryClouser:((_ city :String? ,_ country : String? ,_ error :Error?  )-> ())?
+    internal func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location : CLLocation = manager.location else{return}
+        CLGeocoder().reverseGeocodeLocation(location)  {[weak self]placemarks ,error in
+            self?.countryClouser?(placemarks?.first?.locality!, placemarks?.first?.country!, nil)
+            self?.countryClouser
+        }
+        locationManager.stopUpdatingLocation()
         
     }
     
-    
-    internal func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location : CLLocation = manager.location else{return}
-        getCityAnd { (city, country, error) in
-            guard let city = city , let  country = country , error == nil else { return }
-         
-        }
-    }
-     func getCityAnd( country completion : @escaping (_ city :String? ,_ country : String? ,_ error :Error?  )-> ()){
-        var location = CLLocation ()
+    func getCityAnd( country completion : @escaping (_ city :String? ,_ country : String? ,_ error :Error?  )-> ()){
         locationManager.requestAlwaysAuthorization()
         locationManager.requestWhenInUseAuthorization()
         if CLLocationManager.locationServicesEnabled() {
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            self.countryClouser = completion
             locationManager.startUpdatingLocation()
+            
         }
-        CLGeocoder().reverseGeocodeLocation(location) { placemarks, error in
-            completion(placemarks?.first?.locality, placemarks?.first?.country, error)
-        }
+        
     }
 }

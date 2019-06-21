@@ -387,7 +387,7 @@
         <scene sceneID="f3e-8x-nof">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OS9-DI-F3y" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="League" id="Zqp-Vq-H3O"/>
+                    <tabBarItem key="tabBarItem" title="League" image="league" id="Zqp-Vq-H3O"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nUc-ZX-PIh">
@@ -404,4 +404,7 @@
             <point key="canvasLocation" x="-2178" y="592"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="league" width="30" height="30"/>
+    </resources>
 </document>
