@@ -75,7 +75,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YkC-XW-A0M"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="8ir-hs-3iT"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home" id="8ir-hs-3iT"/>
                     <connections>
                         <outlet property="btnStartTrip" destination="96c-0D-Vk1" id="YoB-SN-LBM"/>
                         <outlet property="daysLeftLBL" destination="Vqv-Ng-yh8" id="WvE-li-Rdu"/>
@@ -131,10 +131,10 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="j0E-iD-wZs" kind="relationship" relationship="viewControllers" id="LpO-LL-YMs"/>
-                        <segue destination="wvJ-0C-S6n" kind="relationship" relationship="viewControllers" id="A3M-1Q-jyI"/>
-                        <segue destination="H81-dw-dTn" kind="relationship" relationship="viewControllers" id="c8t-Gc-Tr6"/>
-                        <segue destination="tUB-07-EPd" kind="relationship" relationship="viewControllers" id="gu1-g8-Dcv"/>
+                        <segue destination="tUB-07-EPd" kind="relationship" relationship="viewControllers" id="Q52-RG-QeM"/>
+                        <segue destination="H81-dw-dTn" kind="relationship" relationship="viewControllers" id="l1L-gT-5jr"/>
+                        <segue destination="j0E-iD-wZs" kind="relationship" relationship="viewControllers" id="b5W-MH-6wD"/>
+                        <segue destination="wvJ-0C-S6n" kind="relationship" relationship="viewControllers" id="ilX-ke-ymV"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="61J-Ge-keF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -142,4 +142,7 @@
             <point key="canvasLocation" x="274" y="-140"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="home" width="30" height="30"/>
+    </resources>
 </document>

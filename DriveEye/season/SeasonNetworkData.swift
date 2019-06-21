@@ -21,7 +21,7 @@ class SeasonNetworkData{
     }
     
     func getSeasonList(responseHandel: @escaping ([Season]) -> Void,errorHandel: @escaping (ErrorResponse) -> Void){
-        Alamofire.request(baseUrl + seasons + String(/*me.userId*/2)).responseJSON { (responseObject) -> Void in
+        Alamofire.request(baseUrl + seasons + String(Utils.getCurrentUserId())).responseJSON { (responseObject) -> Void in
             if responseObject.result.isSuccess {
                 do{
                     print(responseObject)

@@ -277,7 +277,7 @@
         <scene sceneID="CTl-GW-zSh">
             <objects>
                 <splitViewController id="vqw-IK-w6Y" customClass="SeasonSplitViewController" customModule="DriveEye" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Saeson" id="XcK-8E-LuW"/>
+                    <tabBarItem key="tabBarItem" title="Saeson" image="cup" id="XcK-8E-LuW"/>
                     <connections>
                         <segue destination="dRb-V8-zVT" kind="relationship" relationship="masterViewController" id="Zka-00-weX"/>
                         <segue destination="cPz-3J-E8F" kind="relationship" relationship="detailViewController" id="HE7-ar-CwC"/>
@@ -288,6 +288,9 @@
             <point key="canvasLocation" x="917" y="-200"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cup" width="24" height="24"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="HE7-ar-CwC"/>
     </inferredMetricsTieBreakers>
