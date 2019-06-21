@@ -11,8 +11,9 @@ import UIKit
 class LeagueViewController: UIViewController, UITableViewDataSource, UITableViewDelegate,UIPopoverPresentationControllerDelegate, LeagueDelegate {
     
     @IBOutlet weak var tableView: UITableView!
-   
     
+    
+    let emptyView = EmptyViewController(nibName: "", bundle: nil)
     var leagueDetailsVC: LeagueDetailsViewController!
     var presenter: LeaguePresenter!
     var leagues = [League]()
@@ -52,17 +53,29 @@ class LeagueViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func setLeagues(leagues: [League]) {
+        emptyView.removeFromParentViewController()
         self.leagues = leagues
         self.tableView.reloadData()
     }
     
     func addLeague(league: League) {
+        emptyView.removeFromParentViewController()
         self.leagues.append(league)
         self.tableView.reloadData()
     }
     
+    func displayNoData() {
+        self.view.addSubview(emptyView.view)
+        emptyView.didMove(toParentViewController: self)
+        emptyView.view.frame = CGRect(x:0, y: 0, width: view.frame.width, height: view.frame.height)
+    }
+    
+    func displayNetworkError(error: String) {
+        print(error)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
+        
         if segue.identifier == "openPopOverMenue" {
             let customMenueVC = segue.destination as! CustomMenueViewController
             customMenueVC.leagueVC = self

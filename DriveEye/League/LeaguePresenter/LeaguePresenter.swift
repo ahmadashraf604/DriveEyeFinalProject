@@ -12,6 +12,7 @@ class LeaguePresenter {
     
     private let leagueModel: LeagueModel
     private let leagueVC: LeagueDelegate
+    private let userID: Int = Utils.getCurrentUserId()
     
     init(leagueVC: LeagueDelegate) {
         self.leagueModel = LeagueModel()
@@ -19,8 +20,14 @@ class LeaguePresenter {
     }
     
     func getLeague() {
-        leagueModel.getLeagues(responseHandel: {(leagues) in
+        leagueModel.getLeagues(userId: userID, responseHandle: {(leagues) in
             self.leagueVC.setLeagues(leagues: leagues)
+        }, errorHandle: {(status, error) in
+            if status {
+                self.leagueVC.displayNoData()
+            }else{
+                self.leagueVC.displayNetworkError(error: error)
+            }
         })
     }
 }

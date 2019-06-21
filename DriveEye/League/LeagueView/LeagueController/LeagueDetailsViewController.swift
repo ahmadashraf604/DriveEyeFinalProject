@@ -53,5 +53,12 @@ class LeagueDetailsViewController: UIViewController, UITableViewDelegate, UITabl
         self.users = users
         self.leagueTableView.reloadData()
     }
+    
+    func displayNoData() {
+        print("no data found")    }
+    
+    func displayNetworkError(error: String) {
+        print(error)
+    }
 }
 

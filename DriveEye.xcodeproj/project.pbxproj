@@ -24,6 +24,8 @@
 		A39AFFD822B65B530067476C /* CarRegViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39AFFD722B65B530067476C /* CarRegViewController.swift */; };
 		A39AFFDA22B65FF10067476C /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39AFFD922B65FF10067476C /* Car.swift */; };
 		B75F60E62E8F737037993EDA /* Pods_DriveEyeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 931A32646AF10CEAF3DEFC0C /* Pods_DriveEyeUITests.framework */; };
+		DC406E5822BCF65900F05C4B /* emptyCollection.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC406E5722BCF65900F05C4B /* emptyCollection.xib */; };
+		DC406E5B22BCFC6400F05C4B /* EmptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC406E5A22BCFC6400F05C4B /* EmptyViewController.swift */; };
 		DC36A3D522BA8938008B46F5 /* HomeRespons.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC36A3D422BA8938008B46F5 /* HomeRespons.swift */; };
 		DC36A3D822BBAFD0008B46F5 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC36A3D722BBAFD0008B46F5 /* Spinner.swift */; };
 		DC46BE2622B41D8B0071E567 /* SeasonSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC46BE2522B41D8B0071E567 /* SeasonSplitViewController.swift */; };
@@ -133,6 +135,8 @@
 		AA8EAF5455F66618A1C1A44C /* Pods_DriveEye.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DriveEye.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBD01247F36D25AAC7E3DEFC /* Pods-DriveEyeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DriveEyeUITests.release.xcconfig"; path = "Target Support Files/Pods-DriveEyeUITests/Pods-DriveEyeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C093C66AF528C824BB62795C /* Pods-DriveEye.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DriveEye.release.xcconfig"; path = "Target Support Files/Pods-DriveEye/Pods-DriveEye.release.xcconfig"; sourceTree = "<group>"; };
+		DC406E5722BCF65900F05C4B /* emptyCollection.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = emptyCollection.xib; sourceTree = "<group>"; };
+		DC406E5A22BCFC6400F05C4B /* EmptyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViewController.swift; sourceTree = "<group>"; };
 		DC36A3D422BA8938008B46F5 /* HomeRespons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRespons.swift; sourceTree = "<group>"; };
 		DC36A3D722BBAFD0008B46F5 /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
 		DC46BE2522B41D8B0071E567 /* SeasonSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonSplitViewController.swift; sourceTree = "<group>"; };
@@ -349,6 +353,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DC406E5922BCFBCB00F05C4B /* empty */ = {
+			isa = PBXGroup;
+			children = (
+				DC406E5722BCF65900F05C4B /* emptyCollection.xib */,
+				DC406E5A22BCFC6400F05C4B /* EmptyViewController.swift */,
+			);
+			path = empty;
+			sourceTree = "<group>";
+		};
 		DC36A3D622BBAFA7008B46F5 /* utility */ = {
 			isa = PBXGroup;
 			children = (
@@ -360,6 +373,7 @@
 		DC79C39122A2D35200E4590A /* customViews */ = {
 			isa = PBXGroup;
 			children = (
+				DC406E5922BCFBCB00F05C4B /* empty */,
 				DC79C39222A2D35200E4590A /* alert */,
 				DC79C39622A2D35200E4590A /* UIButtonExtention.swift */,
 				DC4B604E22B78F2A006EC7ED /* UIStackViewExtention.swift */,
@@ -792,6 +806,7 @@
 				DC8FBA4B22A2FB4600973FF5 /* HomeStoryboard.storyboard in Resources */,
 				DC8012DD22A2B89C001FE9CB /* Assets.xcassets in Resources */,
 				DC974F6522A2CE33009993C9 /* Season.storyboard in Resources */,
+				DC406E5822BCF65900F05C4B /* emptyCollection.xib in Resources */,
 				A34249C422B419D600FA24F9 /* logo.png in Resources */,
 				DC8012D822A2B89C001FE9CB /* Main.storyboard in Resources */,
 				DC80134822A2C3CC001FE9CB /* League.storyboard in Resources */,
@@ -952,6 +967,7 @@
 				DC974F5822A2CD65009993C9 /* SeasonUsersResponse.swift in Sources */,
 				A34249C022B4186C00FA24F9 /* LoginViewController.swift in Sources */,
 				DC8012DB22A2B89C001FE9CB /* DriveEye.xcdatamodeld in Sources */,
+				DC406E5B22BCFC6400F05C4B /* EmptyViewController.swift in Sources */,
 				DC974F5D22A2CD65009993C9 /* SeasonDetailsViewProtocol.swift in Sources */,
 				A39AFFD622B6562F0067476C /* UserToReg.swift in Sources */,
 				DC8FBA3922A2F9AD00973FF5 /* CoachModelIMP.swift in Sources */,
