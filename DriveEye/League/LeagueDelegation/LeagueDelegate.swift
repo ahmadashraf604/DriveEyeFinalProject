@@ -14,4 +14,8 @@ protocol LeagueDelegate {
     
     func addLeague(league: League)
     
+    func displayNoData()
+    
+    func displayNetworkError(error: String)
+    
 }

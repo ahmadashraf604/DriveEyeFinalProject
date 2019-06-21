@@ -11,4 +11,8 @@ import Foundation
 protocol LeagueDetailsDelegate {
     
     func setLeagueUsers(users: [UserLeague])
+    
+    func displayNoData()
+    
+    func displayNetworkError(error: String)
 }

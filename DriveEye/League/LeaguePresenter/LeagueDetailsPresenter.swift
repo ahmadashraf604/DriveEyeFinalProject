@@ -10,7 +10,7 @@ import Foundation
 
 class LeagueDetailsPresenter {
     
-    private let userID = 1
+    private let userID: Int = Utils.getCurrentUserId()
     private var leagueVC: LeagueDetailsDelegate
     private let leagueModel: LeagueModel
     
@@ -20,8 +20,14 @@ class LeagueDetailsPresenter {
     }
     
     func getUsers(leagueID: Int) {
-        leagueModel.getLeagueUsers(leagueID: leagueID, responseHandel: {(users) in
+        leagueModel.getLeagueUsers(leagueID: leagueID, responseHandle: {(users) in
             self.leagueVC.setLeagueUsers(users: users)
+        },errorHandle: {(status, error) in
+            if status {
+                self.leagueVC.displayNoData()
+            }else{
+                self.leagueVC.displayNetworkError(error: error)
+            }
         })
     }
 }

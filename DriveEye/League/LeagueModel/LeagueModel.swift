@@ -12,36 +12,48 @@ import Alamofire
 class LeagueModel {
     
     private let baseUrl = "https://driveeye.herokuapp.com/"
-    private let subscribed = "userLeague/subscribed/1"
+    private let subscribed = "userLeague/subscribed/"
     private let userLeague = "userLeague/getUsers/"
     private let addLeague = "league/add"
     private let joinLeague = "userLeague/join/"
     
-    func getLeagues(responseHandel: @escaping ([League]) -> Void){
-        Alamofire.request(baseUrl + subscribed).responseJSON { (responseObject) -> Void in
-            if responseObject.result.isSuccess {
+    func getLeagues(userId: Int, responseHandle: @escaping ([League]) -> Void, errorHandle: @escaping (Bool, String) -> Void){
+        Alamofire.request(baseUrl + subscribed + String(userId)).responseJSON { (responseObject) -> Void in
+            
+            switch responseObject.result {
+            case .success(_) :
                 do{
                     let leagueResponse = try JSONDecoder().decode(LeagueResponse.self, from: responseObject.data!)
-                    if leagueResponse.status {
-                        responseHandel(leagueResponse.leagues)
-                    }
+                    responseHandle(leagueResponse.leagues)
                 }catch{
-                    print("no data found")
+                    let leagueResponse = try! JSONDecoder().decode(LeaguePostErrorResponse.self, from: responseObject.data!)
+                    errorHandle(true, leagueResponse.error)
                 }
+            case .failure(_) :
+                errorHandle(false, "network error")
+            }
+            
+        }
+    }
+    
+    func getLeagueUsers(leagueID: Int, responseHandle:  @escaping ([UserLeague]) -> Void, errorHandle: @escaping (Bool, String) -> Void){
+        
+        Alamofire.request(baseUrl + userLeague + String(leagueID)).responseJSON { (responseObject) -> Void in
+            switch responseObject.result {
+            case .success(_) :
+                do{
+                    let leagueDetailsResponse = try JSONDecoder().decode(LeagueDetailsResponse.self, from: responseObject.data!)
+                    responseHandle(leagueDetailsResponse.userLeagues)
+                }catch{
+                    let leagueResponse = try! JSONDecoder().decode(LeaguePostErrorResponse.self, from: responseObject.data!)
+                    errorHandle(true, leagueResponse.error)
+                }
+            case .failure(_) :
+                errorHandle(false, "network error")
             }
         }
     }
     
-    func getLeagueUsers(leagueID: Int, responseHandel:  @escaping ([UserLeague]) -> Void ){
-        Alamofire.request(baseUrl + userLeague + String(leagueID)).responseJSON { (responseObject) -> Void in
-            if responseObject.result.isSuccess {
-                let leagueDetailsResponse = try! JSONDecoder().decode(LeagueDetailsResponse.self, from: responseObject.data!)
-                if leagueDetailsResponse.status {
-                    responseHandel(leagueDetailsResponse.userLeagues)
-                }
-            }
-        }
-    }
     
     func addLeague(leagueName: String, userID: Int, responseHandel: @escaping (LeaguePostResponse) -> Void, errorHandel: @escaping (LeaguePostErrorResponse) -> Void){
         let parameters: [String : Any] = ["name" : leagueName, "ownerId" : userID]

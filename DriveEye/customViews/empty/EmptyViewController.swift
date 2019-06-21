@@ -8,8 +8,9 @@
 
 import UIKit
 
-class emptyView: UIView {
+class EmptyViewController: UIViewController {
 
+    @IBOutlet weak var textLabel: UILabel!
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
@@ -17,5 +18,13 @@ class emptyView: UIView {
         // Drawing code
     }
     */
-
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: "emptyCollection", bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+//        fatalError("init(coder:) has not been implemented")
+    }
+    
 }
