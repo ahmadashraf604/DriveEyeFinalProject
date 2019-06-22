@@ -12,4 +12,5 @@ protocol RegisterVCProtocol: NSObjectProtocol {
     func showAlert(msg: String)
     func populateCitiesTable(cities: CitiesResponse)
     func goToHomeScreen()
+    func goToCarScreen()
 }
