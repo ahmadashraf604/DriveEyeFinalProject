@@ -21,7 +21,9 @@ class SeasonNetworkData{
     }
     
     func getSeasonList(responseHandel: @escaping ([Season]) -> Void,errorHandel: @escaping (ErrorResponse) -> Void){
+        Spinner.start()
         Alamofire.request(baseUrl + seasons + String(Utils.getCurrentUserId())).responseJSON { (responseObject) -> Void in
+            Spinner.stop()
             if responseObject.result.isSuccess {
                 do{
                     print(responseObject)
@@ -40,7 +42,9 @@ class SeasonNetworkData{
     }
     
     func getSeasonUsers(seasonId: Int, responseHandel: @escaping ([SeasonUser]) -> Void ,errorHandel: @escaping (ErrorResponse) -> Void){
+         Spinner.start()
         Alamofire.request(baseUrl + seasonUsers + String(seasonId)).responseJSON { (responseObject) -> Void in
+            Spinner.stop()
             if responseObject.result.isSuccess {
                 do{
                     let seasonUsersResponse = try JSONDecoder().decode(SeasonUsersResponse.self, from: responseObject.data!)

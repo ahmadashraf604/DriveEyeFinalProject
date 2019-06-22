@@ -21,7 +21,13 @@ class SeasonTableViewController: UITableViewController , SeasonViewProtocol {
     
     var seasonsPresenter:SeasonsPresenter!
     
-    var seasonList:[Season]? = nil
+    var seasonList:[Season]?{
+        didSet{
+            if seasonList?.count == 0{
+                NoDataMessageView.displayNoData(parent: self.view)
+            }
+        }
+    }
     
     
     var seasonDeatailsViewController: SeasonDetailsViewController? = nil

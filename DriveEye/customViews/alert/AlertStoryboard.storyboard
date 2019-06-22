@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -23,28 +24,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h8h-bh-Ues">
-                                <rect key="frame" x="67.5" y="277" width="240" height="113"/>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h8h-bh-Ues">
+                                <rect key="frame" x="67.5" y="261" width="240" height="145"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qb7-uB-dDG">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="60"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="RIE-2d-ezx">
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="RIE-2d-ezx">
                                                 <rect key="frame" x="-0.5" y="0.0" width="240.5" height="60"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car" translatesAutoresizingMaskIntoConstraints="NO" id="LlQ-TO-MZY">
-                                                        <rect key="frame" x="0.0" y="0.0" width="120.5" height="60"/>
+                                                        <rect key="frame" x="0.0" y="8" width="116.5" height="44"/>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y0a-Oh-4Gq">
-                                                        <rect key="frame" x="120.5" y="19" width="120" height="22"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y0a-Oh-4Gq">
+                                                        <rect key="frame" x="124.5" y="19" width="116" height="22"/>
                                                         <fontDescription key="fontDescription" name="Farah" family="Farah" pointSize="22"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstItem="LlQ-TO-MZY" firstAttribute="top" secondItem="RIE-2d-ezx" secondAttribute="top" id="Lsu-1c-R6n"/>
-                                                    <constraint firstAttribute="bottom" secondItem="LlQ-TO-MZY" secondAttribute="bottom" id="WPA-CN-mxg"/>
+                                                    <constraint firstItem="LlQ-TO-MZY" firstAttribute="top" secondItem="RIE-2d-ezx" secondAttribute="top" constant="8" id="Lsu-1c-R6n"/>
+                                                    <constraint firstAttribute="bottom" secondItem="LlQ-TO-MZY" secondAttribute="bottom" constant="8" id="WPA-CN-mxg"/>
                                                 </constraints>
                                             </stackView>
                                         </subviews>
@@ -59,17 +60,17 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sfb-db-mmL">
-                                        <rect key="frame" x="0.0" y="60" width="240" height="23"/>
+                                        <rect key="frame" x="0.0" y="76" width="240" height="23"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afA-Ke-gp8">
-                                        <rect key="frame" x="97" y="83" width="46" height="30"/>
+                                        <rect key="frame" x="101" y="107" width="38" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="Cak-jN-HWn"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="Got it"/>
                                         <connections>
                                             <action selector="alertAction:" destination="wfx-5v-vHc" eventType="touchUpInside" id="ga1-GQ-FOJ"/>
                                         </connections>
@@ -77,13 +78,13 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="afA-Ke-gp8" firstAttribute="top" secondItem="sfb-db-mmL" secondAttribute="bottom" id="5qp-Yw-lVF"/>
-                                    <constraint firstItem="sfb-db-mmL" firstAttribute="top" secondItem="Qb7-uB-dDG" secondAttribute="bottom" id="9Oz-m5-xvB"/>
+                                    <constraint firstItem="afA-Ke-gp8" firstAttribute="top" secondItem="sfb-db-mmL" secondAttribute="bottom" constant="8" id="5qp-Yw-lVF"/>
+                                    <constraint firstItem="sfb-db-mmL" firstAttribute="top" secondItem="Qb7-uB-dDG" secondAttribute="bottom" constant="16" id="9Oz-m5-xvB"/>
                                     <constraint firstAttribute="trailing" secondItem="Qb7-uB-dDG" secondAttribute="trailing" id="BOc-Nr-LXf"/>
                                     <constraint firstItem="afA-Ke-gp8" firstAttribute="centerX" secondItem="h8h-bh-Ues" secondAttribute="centerX" id="Eee-p8-3w0"/>
-                                    <constraint firstAttribute="bottom" secondItem="afA-Ke-gp8" secondAttribute="bottom" id="Inn-61-gvc"/>
                                     <constraint firstItem="Qb7-uB-dDG" firstAttribute="top" secondItem="h8h-bh-Ues" secondAttribute="top" id="JHa-N8-2yS"/>
                                     <constraint firstAttribute="trailing" secondItem="sfb-db-mmL" secondAttribute="trailing" id="SKP-qm-dIz"/>
+                                    <constraint firstAttribute="bottom" secondItem="afA-Ke-gp8" secondAttribute="bottom" constant="8" id="Yk7-Kg-jsw"/>
                                     <constraint firstItem="Qb7-uB-dDG" firstAttribute="leading" secondItem="h8h-bh-Ues" secondAttribute="leading" id="cvW-Qc-lUF"/>
                                     <constraint firstItem="sfb-db-mmL" firstAttribute="leading" secondItem="h8h-bh-Ues" secondAttribute="leading" id="hsY-cm-Tzl"/>
                                     <constraint firstItem="Qb7-uB-dDG" firstAttribute="top" secondItem="h8h-bh-Ues" secondAttribute="top" id="nJg-yw-3DK"/>
@@ -112,6 +113,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="car" width="500" height="333"/>
+        <image name="car" width="800" height="510"/>
     </resources>
 </document>

@@ -31,7 +31,13 @@ class SeasonDetailsViewController: UIViewController , UITableViewDelegate, UITab
             configureView()
         }
     }
-    var seasonUserList:[SeasonUser]!
+    var seasonUserList:[SeasonUser]?{
+        didSet{
+            if seasonUserList?.count == 0{
+                NoDataMessageView.displayNoData(parent: self.view)
+            }
+        }
+    }
     
       var seasonDetailsPresenter:SeasonDetailsPresenter!
     

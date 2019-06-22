@@ -20,7 +20,7 @@ class SeasonDetailsPresenter{
         model.getSeasonUsers(seasonId: seasonId, responseHandel: {(seasonUsers) in
             self.seasonDetailsViewProtocol.seasonUsers = seasonUsers
         }, errorHandel: {(errorResponse) in
-            
+            self.seasonDetailsViewProtocol.seasonUsers = []
         })
         //TODO Loading view
     }
