@@ -7,6 +7,7 @@ target 'DriveEye' do
 
   # Pods for DriveEye
   pod 'Alamofire', '~> 4.7'
+ pod 'SDWebImage', '~> 4.0'
 
   target 'DriveEyeTests' do
     inherit! :search_paths

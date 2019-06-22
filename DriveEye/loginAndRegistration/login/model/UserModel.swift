@@ -64,13 +64,15 @@ class UserModel {
         Alamofire.request(registerUrl, method: .post, parameters: parameters)
             .responseJSON { response in
                 guard let data = response.data else { return }
+                print(response)
                 do {
                     let decoder = JSONDecoder()
                     let user = try decoder.decode(UserResponse.self, from: data)
                     print(user)
                     closure(user)
-                } catch _ {
+                } catch let error{
                     closure(nil)
+                    print(error)
                 }
         }
     }
