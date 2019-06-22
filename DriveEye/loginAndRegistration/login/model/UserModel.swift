@@ -21,10 +21,11 @@ class UserModel {
         ]
         Alamofire.request(loginUrl, method: .post, parameters: parameters)
             .responseJSON { response in
+                print(response)
                 guard let data = response.data else { return }
                 do {
                     let decoder = JSONDecoder()
-                    let user = try decoder.decode(UserResponse.self, from: data)
+                    let user = try decoder.decode(UserResponse.self, from: response.data!)
                     print(user)
                     closure(user)
                 } catch _ {
