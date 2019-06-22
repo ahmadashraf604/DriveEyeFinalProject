@@ -1,16 +1,20 @@
 PODS:
   - Alamofire (4.8.2)
+  - GDGauge (1.1.4)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
+  - GDGauge
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - GDGauge
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  GDGauge: 645ee6933c6f95289e43ef93259a5788713e7010
 
-PODFILE CHECKSUM: fa5f8b486c0718cd76b158b398fd0af9275b9d88
+PODFILE CHECKSUM: 1f788f34c8be8ac0e88fb4d2400ef0366d25d977
 
 COCOAPODS: 1.6.1

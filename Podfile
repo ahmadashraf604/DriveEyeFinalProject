@@ -7,6 +7,7 @@ target 'DriveEye' do
 
   # Pods for DriveEye
   pod 'Alamofire', '~> 4.7'
+  pod 'GDGauge'
 
   target 'DriveEyeTests' do
     inherit! :search_paths
@@ -17,5 +18,8 @@ target 'DriveEye' do
     inherit! :search_paths
     # Pods for testing
   end
+  
+  
+  
 
 end
