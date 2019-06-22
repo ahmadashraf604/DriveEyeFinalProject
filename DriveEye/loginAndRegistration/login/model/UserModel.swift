@@ -78,17 +78,24 @@ class UserModel {
         }
     }
     
-    //    func addCar(userId: Int, carInfo: Car) {
-    //        let url = "https://driveeye.herokuapp.com/car/add/" + String(userId) + "?" + String(carInfo.brand) + "&" + String(carInfo.model)
-    //
-    //        let  addCarUrl = URL(string: url)!
-    //        Alamofire.request(addCarUrl).responseJSON(completionHandler: {response in
-    //            guard response.data != nil else{return}
-    //            do {
-    //                print(response)
-    //            } catch _ {
-    //                print("error happened while adding a car")
-    //            }
-    //        })
-    //    }
+
+    func addCar(userId: Int, carInfo: Car, onSuccess: @escaping (_ obj: Bool) -> Void) {
+        let url = "https://driveeye.herokuapp.com/car/add/" + String(userId)
+        
+        let  addCarUrl = URL(string: url)!
+        let parameters: [String: Any] = [
+            "brand" : carInfo.brand,
+            "model" : carInfo.model
+        ]
+        
+        Alamofire.request(addCarUrl, method: .get, parameters: parameters).responseJSON(completionHandler: {response in
+            guard response.data != nil else {return}
+            do {
+                print(response)
+                onSuccess(true)
+            } catch _ {
+                print("error happened while adding a car")
+            }
+        })
+    }
 }

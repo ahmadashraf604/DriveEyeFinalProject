@@ -8,28 +8,37 @@
 
 import UIKit
 
-class CarRegViewController: UIViewController {
+class CarRegViewController: UIViewController, CarVCDelegate{
+    func showAlert(msg: String) {
+        
+    }
+    
+    func goToHomeScreen() {
+        let homeScreen = UIStoryboard(name: "HomeStoryboard", bundle: nil)
+        let vc = homeScreen.instantiateInitialViewController()
+        self.present(vc!, animated: true, completion: nil)
+    }
+    
+
+    @IBOutlet weak var carImage: UIImageView!
+    @IBOutlet weak var tfBrand: UITextField!
+    @IBOutlet weak var tfModel: UITextField!
+    @IBOutlet weak var tfReleaseYear: UITextField!
+    
+    let presenter = RegistrationPresenter(userModel: UserModel())
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        presenter.setVCDelegate(vcDelegate: self)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func btnFinishAction(_ sender: Any) {
+        if (tfBrand.text != nil) && (tfModel.text != nil) {
+            
+            let car = Car(brand: tfBrand.text!, model: tfModel.text!)
+            presenter.addCarToUser(userId: Utils.getCurrentUserId(), carInfo: car)
+            
+        }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
