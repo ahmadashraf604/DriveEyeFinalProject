@@ -50,13 +50,17 @@ class HomeModelIMP{
         Alamofire.request(url!  ).responseJSON { (responseObject) -> Void in
             if responseObject.result.isSuccess {
                 do{
+                    print(responseObject)
                     let homeResponse = try JSONDecoder().decode(HomeResponce.self, from: responseObject.data!)
                     if homeResponse.status{
                     responseHandel(homeResponse.home)
                     }
-                }catch {
-                   
+                }catch let error {
+                    print(error)
                 }
+            }
+            else{
+                print("request not completed")
             }
         }
     }

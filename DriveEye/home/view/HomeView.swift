@@ -15,6 +15,7 @@ class HomeView: UIViewController,CLLocationManagerDelegate  , HomeViewProtocol {
     @IBOutlet weak var btnStartTrip: UIButton!
     var seconds = 0
     var timer = Timer()
+    let alertServices = AlertServices ()
 
     var trip : Trip!
     var presenter : HomePresenter! = nil
@@ -38,17 +39,18 @@ class HomeView: UIViewController,CLLocationManagerDelegate  , HomeViewProtocol {
     }
     @IBAction func startTribAction(_ sender: UIButton) {
         switch btnStartTrip.currentTitle! {
-        case "start trip":
+        case "  start trip  ":
             timer=Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector (timeAction), userInfo: nil, repeats: true)
-            btnStartTrip.setTitle("end trip", for: .normal)
+            btnStartTrip.setTitle("  end trip  ", for: .normal)
             presenter.getStartLoation()
             
-        case "end trip":
-            btnStartTrip.setTitle("start trip", for: .normal)
+        case "  end trip  ":
+            btnStartTrip.setTitle("  start trip  ", for: .normal)
             timer.invalidate()
             presenter.getEndLoation()
             trip.duration=Double(seconds)
-            print(Double(seconds/60))
+            let alert = alertServices.alert(title: "ended" ,describtion: " duration = \(convertNumberToTime(time: seconds))")
+            present(alert, animated: true)
             seconds = 0
         default:
             break
@@ -61,7 +63,8 @@ class HomeView: UIViewController,CLLocationManagerDelegate  , HomeViewProtocol {
     func convertNumberToTime(time : Int) -> String{
         let seconds = time % 60
         let minutes = time/60
-        return  " \(minutes ) : \( seconds)"
+        return "\(time / 60 < 10 ? time / 60 : time / 60):\(time % 60 < 10 ? time % 60 : time % 60)"
+//        " \(minutes ) : \( seconds)"
         
     }
     

@@ -21,7 +21,7 @@ class SeasonsPresenter{
         return seasonModel.getSeasonList(responseHandel: {(seasons) in
             self.seasonViewProtocol.seasons = seasons
         }, errorHandel: {(errorResponse) in
-            
+            self.seasonViewProtocol.seasons = []
         })
     }
 }

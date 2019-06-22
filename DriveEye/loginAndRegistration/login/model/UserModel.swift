@@ -13,7 +13,7 @@ class UserModel {
     let  loginUrl = URL(string: "https://driveeye.herokuapp.com/user/login")!
     let  registerUrl = URL(string: "https://driveeye.herokuapp.com/user/register")!
     let  getAllCitiesUrl = URL(string: "https://driveeye.herokuapp.com/city/get")!
-
+    
     func login(email: String, password: String, closure: @escaping (_ obj: UserResponse?) -> Void) {
         let parameters: [String: Any] = [
             "email" : email,
@@ -30,6 +30,7 @@ class UserModel {
                     closure(user)
                 } catch _ {
                     closure(nil)
+
                 }
         }
         
@@ -41,7 +42,7 @@ class UserModel {
             do {
                 let decoder = JSONDecoder()
                 let cities = try decoder.decode(CitiesResponse.self, from: data)
-//                print(cities)
+                //                print(cities)
                 closure(cities)
             } catch _ {
                 
@@ -58,7 +59,7 @@ class UserModel {
             "lastName" : user.lastName,
             "birthdate" : user.birthDate,
             "cityId" : user.cityId,
-        ]
+            ]
         
         Alamofire.request(registerUrl, method: .post, parameters: parameters)
             .responseJSON { response in
@@ -74,6 +75,7 @@ class UserModel {
         }
     }
     
+
     func addCar(userId: Int, carInfo: Car, onSuccess: @escaping (_ obj: Bool) -> Void) {
         let url = "https://driveeye.herokuapp.com/car/add/" + String(userId)
         
