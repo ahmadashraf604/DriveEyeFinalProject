@@ -7,35 +7,63 @@
 
 import UIKit
 import Alamofire
-
-class HomeModelIMP: NSObject{
+class HomeModelIMP{
+    
+    
+    
     let locationService : LocationService!
-    override init() {
-        locationService=LocationService()
+    init() {
+        locationService = LocationService()
     }
-    func getCurrentLocation(compleion : @escaping (_ city :String? ,_ country : String?)->()) {
+    func getStartLocation(compleion : @escaping (_ city :String? )->()) {
         locationService.getCityAnd(country: {city , country , error  in
-            compleion(city, country)
-            print(city)
-            print(country)
-
+            compleion(city)
+            
         })
     }
-    
+    func getEndLocation(compleion : @escaping (_ city :String? )->()) {
+        locationService.getCityAnd(country: {city , country , error  in
+            compleion(city)
+            
+        })
+    }
     func addNewTrip ( _ trip : Trip){
         let url = URL(string: "https://driveeye.herokuapp.com/trip/add")
-        let parameter : [String : Any] = ["startPoint":trip.startPoint,"endtPoint" : trip.endPoint,"duration"  : trip.duration,"userId" : 1 ,"score" : getRandomScore() ]
-//         let parameter : [String : Any] = ["startPoint":"ismaikia","endtPoint" : "cairo","duration"  : 10.50,"userId" : 1 ,"score" : 82 ]
+        let parameter : [String : Any] = ["startPoint":trip.startPoint,"endPoint" : trip.endPoint,
+                                          "duration"  : trip.duration,"userId" : 2 ,"score" : getRandomScore() ]
         Alamofire.request(url!, method:.post, parameters: parameter)
             .responseJSON { response in
                 print(response)
-        
+                
+        }
     }
-}
     func getRandomScore()-> Int {
         let randomInt = arc4random()
         
         return Int(randomInt) / 6
     }
+    
+    
+    
+    func getHomeInfo(userId: Int, responseHandel: @escaping (Home) -> Void ,errorHandel: @escaping (ErrorResponse) -> Void){
+        let url = URL(string: "https://driveeye.herokuapp.com/userSeason/seasonUsersScore/\(userId)")
+        Alamofire.request(url!  ).responseJSON { (responseObject) -> Void in
+            if responseObject.result.isSuccess {
+                do{
+                    let homeResponse = try JSONDecoder().decode(HomeResponce.self, from: responseObject.data!)
+                    if homeResponse.status{
+                    responseHandel(homeResponse.home)
+                    }
+                }catch {
+                   
+                }
+            }
+        }
+    }
+    
+    
+    
+    
+    
     
 }

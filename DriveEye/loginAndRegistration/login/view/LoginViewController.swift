@@ -58,9 +58,9 @@ class LoginViewController: UIViewController, LoginVCProtocol {
     
     @IBAction func register(_ sender: Any) {
         //TODO: Go to the registration screen
-        let carScreen = UIStoryboard(name: "LoginAndRegistraion", bundle: nil)
-        let vc = carScreen.instantiateViewController(withIdentifier: "regController")
-        self.present(vc, animated: true, completion: nil)
+//        let carScreen = UIStoryboard(name: "LoginAndRegistraion", bundle: nil)
+//        let vc = carScreen.instantiateViewController(withIdentifier: "regController")
+//        self.present(vc, animated: true, completion: nil)
     }
     
     @IBAction func loginWithFacebook(_ sender: Any) {

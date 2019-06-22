@@ -10,7 +10,7 @@ import Foundation
 
 class LeagueAlertPresenter {
     
-    private let userID: Int = 1
+    private let userID: Int = Utils.getCurrentUserId()
     private var leagueVC: LeagueAlertDelegate
     private let leagueModel: LeagueModel
     

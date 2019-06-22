@@ -8,16 +8,19 @@
 
 import UIKit
 
-class LeagueViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, LeagueDelegate {
+class LeagueViewController: UIViewController, UITableViewDataSource, UITableViewDelegate,UIPopoverPresentationControllerDelegate, LeagueDelegate {
     
-    @IBOutlet var btnMenue: [UIButton]!
     @IBOutlet weak var tableView: UITableView!
     
+    
+    let emptyView = EmptyViewController(nibName: "", bundle: nil)
     var leagueDetailsVC: LeagueDetailsViewController!
     var presenter: LeaguePresenter!
     var leagues = [League]()
-    private var action: ActionEnum = .add
     
+    func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
+        return .none
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,41 +52,36 @@ class LeagueViewController: UIViewController, UITableViewDataSource, UITableView
         self.navigationController?.show(leagueDetailsVC, sender: self)
     }
     
-    @IBAction func showMenu(_ sender: UIBarButtonItem) {
-        btnMenue.forEach{(button) in
-            UIView.animate(withDuration: 0.3, animations: {
-                button.isHidden = !button.isHidden
-                self.view.layoutIfNeeded()
-            })
-        }
-    }
-    
-    @IBAction func addNewLeague(_ sender: UIButton) {
-        action = .add
-        performSegue(withIdentifier: "openAlertLeague", sender: self)
-    }
-    
-    
-    @IBAction func joinExistingLeague(_ sender: UIButton) {
-        action = .join
-        performSegue(withIdentifier: "openAlertLeague", sender: self)
-    }
-    
     func setLeagues(leagues: [League]) {
+        emptyView.removeFromParentViewController()
         self.leagues = leagues
         self.tableView.reloadData()
     }
     
     func addLeague(league: League) {
+        emptyView.removeFromParentViewController()
         self.leagues.append(league)
         self.tableView.reloadData()
     }
     
+    func displayNoData() {
+        self.view.addSubview(emptyView.view)
+        emptyView.didMove(toParentViewController: self)
+        emptyView.view.frame = CGRect(x:0, y: 0, width: view.frame.width, height: view.frame.height)
+    }
+    
+    func displayNetworkError(error: String) {
+        print(error)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "openAlertLeague" {
-            let leageAlertVC = segue.destination as! LeagueAlertViewController
-            leageAlertVC.leagueVC = self
-            leageAlertVC.action = action
+        
+        if segue.identifier == "openPopOverMenue" {
+            let customMenueVC = segue.destination as! CustomMenueViewController
+            customMenueVC.leagueVC = self
+            if let ppc = segue.destination.popoverPresentationController{
+                ppc.delegate = self
+            }
         }
     }
     

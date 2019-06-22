@@ -85,6 +85,7 @@ FlBhc3N3b3JkA
                                                         </state>
                                                         <connections>
                                                             <action selector="register:" destination="DOY-66-c6C" eventType="touchUpInside" id="XQP-As-HX5"/>
+                                                            <segue destination="uev-e4-v0R" kind="modal" id="xLf-kC-vMH"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
