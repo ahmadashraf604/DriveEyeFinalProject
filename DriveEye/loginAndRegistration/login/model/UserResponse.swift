@@ -1,20 +1,11 @@
-//
-//  User.swift
-//  DriveEye
-//
-//  Created by Sallam on 6/14/19.
-//  Copyright © 2019 java. All rights reserved.
-//
-
-import Foundation
 // This file was generated from JSON Schema using quicktype, do not modify it directly.
 // To parse the JSON, add this file to your project and do:
 //
-//   let user = try? newJSONDecoder().decode(User.self, from: jsonData)
+//   let userResponse = try? newJSONDecoder().decode(UserResponse.self, from: jsonData)
 
 import Foundation
 
-// MARK: - User
+// MARK: - UserResponse
 struct UserResponse: Codable {
     let status: Bool
     let response: User
@@ -22,27 +13,58 @@ struct UserResponse: Codable {
 
 // MARK: - Response
 struct User: Codable {
-    var userID: Int
-    var firstName, lastName, email, birthdate: String
-    var level: Int
-    var image: JSONNull?
-    var cityID: CityID
+    let userID: Int
+    let firstName, lastName, email, birthdate: String
+    let level: Int
+    let password: JSONNull?
+    let image: String
+    let car: CarInfo
+    let city: CityInfo
+    let userSeasonBadgeCollection: [UserSeasonBadgeCollection]?
     
     enum CodingKeys: String, CodingKey {
         case userID = "userId"
-        case firstName, lastName, email, birthdate, level, image
-        case cityID = "cityId"
+        case firstName, lastName, email, birthdate, level, password, image, car, city, userSeasonBadgeCollection
     }
 }
 
-// MARK: - CityID
-struct CityID: Codable {
+// MARK: - Car
+struct CarInfo: Codable {
+    let carID: Int
+    let brand, model: String?
+    let image, releaseyear: JSONNull?
+    
+    enum CodingKeys: String, CodingKey {
+        case carID = "carId"
+        case brand, model, image, releaseyear
+    }
+}
+
+// MARK: - City
+struct CityInfo: Codable {
     let cityID: Int
     let name: String
     
     enum CodingKeys: String, CodingKey {
         case cityID = "cityId"
         case name
+    }
+}
+
+// MARK: - UserSeasonBadgeCollection
+struct UserSeasonBadgeCollection: Codable {
+    let badge: Badge
+    let season: JSONNull?
+}
+
+// MARK: - Badge
+struct Badge: Codable {
+    let badgeID: Int
+    let image, name, type: String
+    
+    enum CodingKeys: String, CodingKey {
+        case badgeID = "badgeId"
+        case image, name, type
     }
 }
 
