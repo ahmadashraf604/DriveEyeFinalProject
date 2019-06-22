@@ -19,8 +19,8 @@ class RegisterViewController: UIViewController, RegisterVCProtocol, UITableViewD
     @IBOutlet weak var citiesTableView: UITableView!
     
     @IBOutlet weak var tfPassword: UITextField!
-    @IBOutlet weak var tfCarBrand: UITextField!
-    @IBOutlet weak var tfCarModel: UITextField!
+//    @IBOutlet weak var tfCarBrand: UITextField!
+//    @IBOutlet weak var tfCarModel: UITextField!
     
     var cities: [City] = []
     let presenter = RegistrationPresenter(userModel: UserModel())
@@ -30,7 +30,7 @@ class RegisterViewController: UIViewController, RegisterVCProtocol, UITableViewD
         super.viewDidLoad()
         
         citiesTableView.isHidden = true
-        presenter.setVCDelegate(vcDelegate: self)
+        presenter.setRegisterVCDelegate(vcDelegate: self)
         loadCitiesFromWebService()
         citiesTableView.reloadData()
     }
@@ -77,6 +77,12 @@ class RegisterViewController: UIViewController, RegisterVCProtocol, UITableViewD
         self.present(vc!, animated: true, completion: nil)
     }
     
+    func goToCarScreen() {
+        let carScreen = UIStoryboard(name: "LoginAndRegistraion", bundle: nil)
+        let vc = carScreen.instantiateViewController(withIdentifier: "carController")
+        self.present(vc, animated: true, completion: nil)
+    }
+    
     @IBAction func btnSelectCityAction(_ sender: Any) {
         
         if citiesTableView.isHidden == true {
@@ -89,22 +95,20 @@ class RegisterViewController: UIViewController, RegisterVCProtocol, UITableViewD
     
     @IBAction func btnNext(_ sender: Any) {
         var user: UserToReg?
-        var car: Car?
         
         if (tfFirstName.text != nil) && (tfLastName.text != nil) && (tfPhone.text != nil ) &&
-            (tfEmail.text != nil) && (tfPassword.text != nil) && (cityId != nil) &&
-            (tfCarBrand.text != nil) && (tfCarModel.text != nil) {
+            (tfEmail.text != nil) && (tfPassword.text != nil) && (cityId != nil) {
             
             user = UserToReg(firstName: tfFirstName.text!, lastName: tfLastName.text!, email: tfEmail.text!, password: tfPassword.text!, birthDate: datePicker.date, cityId: cityId!, phone: tfPhone.text!)
             
-            car = Car(brand: tfCarBrand.text!, model: tfCarModel.text!)
-            presenter.registerUser(userInfo: user!, car: car!)
+//            car = Car(brand: tfCarBrand.text!, model: tfCarModel.text!)
+            presenter.registerUser(userInfo: user!)
 
         }
-        if (tfCarBrand.text != nil) && (tfCarModel.text != nil) {
-            car?.brand = tfCarBrand.text!
-            car?.model = tfCarModel.text!
-        }
+//        if (tfCarBrand.text != nil) && (tfCarModel.text != nil) {
+//            car?.brand = tfCarBrand.text!
+//            car?.model = tfCarModel.text!
+//        }
         
 //        print(user!)
         

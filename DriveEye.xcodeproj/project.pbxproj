@@ -18,6 +18,7 @@
 		A34249BE22B4181900FA24F9 /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34249BD22B4181900FA24F9 /* UserResponse.swift */; };
 		A34249C022B4186C00FA24F9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34249BF22B4186C00FA24F9 /* LoginViewController.swift */; };
 		A34249C422B419D600FA24F9 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = A34249C322B419D500FA24F9 /* logo.png */; };
+		A34BF57A22BCED1200F49B68 /* CarVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34BF57922BCED1200F49B68 /* CarVCDelegate.swift */; };
 		A3919C3822B531AD006248FE /* CitiesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3919C3722B531AD006248FE /* CitiesResponse.swift */; };
 		A3937D0322B3F89000F5C1E4 /* RegisterVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3937D0222B3F89000F5C1E4 /* RegisterVCDelegate.swift */; };
 		A39AFFD622B6562F0067476C /* UserToReg.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39AFFD522B6562F0067476C /* UserToReg.swift */; };
@@ -121,6 +122,7 @@
 		A34249BD22B4181900FA24F9 /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
 		A34249BF22B4186C00FA24F9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A34249C322B419D500FA24F9 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		A34BF57922BCED1200F49B68 /* CarVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarVCDelegate.swift; sourceTree = "<group>"; };
 		A3919C3722B531AD006248FE /* CitiesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesResponse.swift; sourceTree = "<group>"; };
 		A3937D0222B3F89000F5C1E4 /* RegisterVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVCDelegate.swift; sourceTree = "<group>"; };
 		A39AFFD522B6562F0067476C /* UserToReg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserToReg.swift; sourceTree = "<group>"; };
@@ -311,6 +313,7 @@
 				A3937D0222B3F89000F5C1E4 /* RegisterVCDelegate.swift */,
 				A34249B522B4147A00FA24F9 /* RegisterViewController.swift */,
 				A39AFFD722B65B530067476C /* CarRegViewController.swift */,
+				A34BF57922BCED1200F49B68 /* CarVCDelegate.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -931,6 +934,7 @@
 				DC8012DB22A2B89C001FE9CB /* DriveEye.xcdatamodeld in Sources */,
 				DC974F5D22A2CD65009993C9 /* SeasonDetailsViewProtocol.swift in Sources */,
 				A39AFFD622B6562F0067476C /* UserToReg.swift in Sources */,
+				A34BF57A22BCED1200F49B68 /* CarVCDelegate.swift in Sources */,
 				DC8FBA3922A2F9AD00973FF5 /* CoachModelIMP.swift in Sources */,
 				DC8FBA3722A2F90300973FF5 /* CoachTVController.swift in Sources */,
 				DC80130B22A2BA30001FE9CB /* LeagueAlertDelegate.swift in Sources */,
