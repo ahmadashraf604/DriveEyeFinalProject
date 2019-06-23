@@ -18,9 +18,10 @@ class CoachTableViewController: UITableViewController  ,CoachViewProtocol{
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.attachView(view: self)
-        coaches = [Coach] ()
-        presenter.getAllCoach()
+        coaches = Coach.getAllCoaches()
+//        presenter.getAllCoach()
     }
+    
     func displayData(coaches: [Coach]) {
         self.coaches = coaches
         tableView.reloadData()
@@ -53,8 +54,14 @@ class CoachTableViewController: UITableViewController  ,CoachViewProtocol{
         return cell
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let alert = alertServices.alert(title: coaches[indexPath.row].title, describtion: coaches[indexPath.row].responseDescription)
-        present(alert, animated: true)
+//        let alert = alertServices.alert(title: coaches[indexPath.row].title, describtion: coaches[indexPath.row].responseDescription)
+//        present(alert, animated: true)
+        let homeScreen = UIStoryboard(name: "Coach", bundle: nil)
+        let vc = homeScreen.instantiateViewController(withIdentifier: "TipsDetails")
+        let vc2 = vc as! TipDetailsViewController
+        vc2.coachModel = coaches[indexPath.row]
+        self.present(vc, animated: true, completion: nil)
+        
     }
     
     

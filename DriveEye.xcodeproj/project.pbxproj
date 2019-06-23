@@ -28,6 +28,7 @@
 		A34249C022B4186C00FA24F9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34249BF22B4186C00FA24F9 /* LoginViewController.swift */; };
 		A34249C422B419D600FA24F9 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = A34249C322B419D500FA24F9 /* logo.png */; };
 		A34BF57A22BCED1200F49B68 /* CarVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34BF57922BCED1200F49B68 /* CarVCDelegate.swift */; };
+		A36C2ED922BFCDE400A25E93 /* TipDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36C2ED822BFCDE400A25E93 /* TipDetailsViewController.swift */; };
 		A3919C3822B531AD006248FE /* CitiesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3919C3722B531AD006248FE /* CitiesResponse.swift */; };
 		A3937D0322B3F89000F5C1E4 /* RegisterVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3937D0222B3F89000F5C1E4 /* RegisterVCDelegate.swift */; };
 		A39AFFD622B6562F0067476C /* UserToReg.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39AFFD522B6562F0067476C /* UserToReg.swift */; };
@@ -148,6 +149,7 @@
 		A34249BF22B4186C00FA24F9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A34249C322B419D500FA24F9 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		A34BF57922BCED1200F49B68 /* CarVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarVCDelegate.swift; sourceTree = "<group>"; };
+		A36C2ED822BFCDE400A25E93 /* TipDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipDetailsViewController.swift; sourceTree = "<group>"; };
 		A3919C3722B531AD006248FE /* CitiesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesResponse.swift; sourceTree = "<group>"; };
 		A3937D0222B3F89000F5C1E4 /* RegisterVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVCDelegate.swift; sourceTree = "<group>"; };
 		A39AFFD522B6562F0067476C /* UserToReg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserToReg.swift; sourceTree = "<group>"; };
@@ -641,6 +643,7 @@
 				DC8FBA3322A2F90200973FF5 /* Coach.storyboard */,
 				DC8FBA3222A2F90100973FF5 /* CoachTVCell.swift */,
 				DC8FBA3422A2F90200973FF5 /* CoachTVController.swift */,
+				A36C2ED822BFCDE400A25E93 /* TipDetailsViewController.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -1054,6 +1057,7 @@
 				A34249BA22B4170000FA24F9 /* LoginPresenter.swift in Sources */,
 				DC80131D22A2BB8F001FE9CB /* LeagueResponse.swift in Sources */,
 				DC974F5A22A2CD65009993C9 /* SeasonDetailsPresenter.swift in Sources */,
+				A36C2ED922BFCDE400A25E93 /* TipDetailsViewController.swift in Sources */,
 				DC974F5822A2CD65009993C9 /* SeasonUsersResponse.swift in Sources */,
 				A34249C022B4186C00FA24F9 /* LoginViewController.swift in Sources */,
 				DC8012DB22A2B89C001FE9CB /* DriveEye.xcdatamodeld in Sources */,
