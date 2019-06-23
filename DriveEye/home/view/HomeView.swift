@@ -24,7 +24,8 @@ class HomeView: UIViewController,CLLocationManagerDelegate  , HomeViewProtocol {
         presenter =  HomePresenter(model: HomeModelIMP())
         trip = Trip()
         presenter.attachView(view: self)
-        presenter.getHomeInfo(id: 2)
+        presenter.getHomeInfo(id: 1)
+        print(Utils.getCurrentUserId())
         Spinner.start()
     }
 

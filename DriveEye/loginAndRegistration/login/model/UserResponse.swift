@@ -18,7 +18,7 @@ struct UserInfo: Codable {
     let level: Int
     let password: String?
     let image: String
-    let car: CarInfo
+    let car: CarInfo?
     let city: CityInfo
     let userSeasonBadgeCollection: [UserSeasonBadgeCollection]?
     
