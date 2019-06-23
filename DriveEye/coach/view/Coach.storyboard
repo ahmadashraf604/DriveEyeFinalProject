@@ -6,7 +6,10 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -54,6 +57,88 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qj3-MY-GwV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-87" y="9"/>
+        </scene>
+        <!--Tip Details View Controller-->
+        <scene sceneID="u4T-Qy-Zo2">
+            <objects>
+                <viewController storyboardIdentifier="TipsDetails" id="snK-yK-xDq" customClass="TipDetailsViewController" customModule="DriveEye" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QEa-eh-oRs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Ror-b5-0Pw">
+                                <rect key="frame" x="40" y="110" width="295" height="447"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M9o-ai-u7Y">
+                                        <rect key="frame" x="0.0" y="0.0" width="295" height="150"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="N1J-NP-EyV">
+                                                <rect key="frame" x="0.0" y="0.0" width="132.5" height="150"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="150" id="5Kf-uF-Zuw"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seat belt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZDo-cA-f7d">
+                                                <rect key="frame" x="132.5" y="0.0" width="162.5" height="150"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="N1J-NP-EyV" firstAttribute="width" secondItem="M9o-ai-u7Y" secondAttribute="width" multiplier="0.45" id="YrH-U7-tqm"/>
+                                        </constraints>
+                                    </stackView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="n2i-mc-LRs">
+                                        <rect key="frame" x="0.0" y="162" width="295" height="243"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MuD-Fa-rz5">
+                                        <rect key="frame" x="0.0" y="417" width="295" height="30"/>
+                                        <color key="backgroundColor" red="0.1395675847" green="0.62125414209999996" blue="0.6634350712" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="lo9-h3-WCR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Got it">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="dismissAction:" destination="snK-yK-xDq" eventType="touchUpInside" id="OEH-xV-wh3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="n2i-mc-LRs" firstAttribute="leading" secondItem="Ror-b5-0Pw" secondAttribute="leading" id="1QM-ZU-gNS"/>
+                                    <constraint firstItem="n2i-mc-LRs" firstAttribute="width" secondItem="Ror-b5-0Pw" secondAttribute="height" multiplier="295:447" id="7Rr-Cj-25P"/>
+                                    <constraint firstItem="M9o-ai-u7Y" firstAttribute="width" secondItem="Ror-b5-0Pw" secondAttribute="width" id="uKr-k5-wXH"/>
+                                    <constraint firstAttribute="trailing" secondItem="n2i-mc-LRs" secondAttribute="trailing" id="ynK-SX-Aro"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.56363023477157359" green="0.56363023477157359" blue="0.56363023477157359" alpha="0.32844606164383561" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="NuU-Tk-wkY" firstAttribute="bottom" secondItem="Ror-b5-0Pw" secondAttribute="bottom" constant="110" id="6cq-XU-lJu"/>
+                            <constraint firstItem="Ror-b5-0Pw" firstAttribute="leading" secondItem="NuU-Tk-wkY" secondAttribute="leading" constant="40" id="PAj-x1-ehr"/>
+                            <constraint firstItem="NuU-Tk-wkY" firstAttribute="trailing" secondItem="Ror-b5-0Pw" secondAttribute="trailing" constant="40" id="mXb-k6-LaM"/>
+                            <constraint firstItem="Ror-b5-0Pw" firstAttribute="top" secondItem="NuU-Tk-wkY" secondAttribute="top" constant="90" id="s6S-Qg-v0g"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NuU-Tk-wkY"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="img" destination="N1J-NP-EyV" id="OZb-tK-Fz2"/>
+                        <outlet property="stackView" destination="Ror-b5-0Pw" id="3KR-na-0e9"/>
+                        <outlet property="tfTitle" destination="ZDo-cA-f7d" id="3wT-tg-pTG"/>
+                        <outlet property="tvDescription" destination="n2i-mc-LRs" id="YlW-4v-VbJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Hp-0p-0oC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="661.60000000000002" y="8.995502248875562"/>
         </scene>
     </scenes>
     <resources>
