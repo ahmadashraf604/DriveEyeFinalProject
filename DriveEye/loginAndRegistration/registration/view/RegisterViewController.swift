@@ -57,7 +57,6 @@ class RegisterViewController: UIViewController, RegisterVCProtocol, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cityCell", for: indexPath)
         cell.textLabel?.text = cities[indexPath.row].name
-        print(cities[indexPath.row])
         return cell
     }
     
