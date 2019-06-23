@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ecu-fj-j5A">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ecu-fj-j5A">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Login View Controller-->
+        <!--Drive Eye-->
         <scene sceneID="bgq-C1-UQ3">
             <objects>
                 <viewController id="DOY-66-c6C" customClass="LoginViewController" customModule="DriveEye" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,6 +19,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Purple-Blue-Bubbles" translatesAutoresizingMaskIntoConstraints="NO" id="tY0-I0-XxM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SU5-31-61T">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
@@ -42,7 +44,6 @@
                                                 <rect key="frame" x="0.0" y="270" width="282" height="73"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="awd@iti.com" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8C0-M8-4g9">
-
                                                         <rect key="frame" x="0.0" y="0.0" width="282" height="30"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <string key="placeholder" base64-UTF8="YES">
@@ -137,15 +138,19 @@ FlBhc3N3b3JkA
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="tY0-I0-XxM" firstAttribute="top" secondItem="2Oy-OA-2SC" secondAttribute="top" id="0O0-sb-rNk"/>
                             <constraint firstItem="SU5-31-61T" firstAttribute="top" secondItem="WK0-BN-XYT" secondAttribute="top" id="By3-4J-cFX"/>
                             <constraint firstItem="SU5-31-61T" firstAttribute="centerY" secondItem="WK0-BN-XYT" secondAttribute="centerY" id="CTj-eZ-gji"/>
                             <constraint firstItem="SU5-31-61T" firstAttribute="centerX" secondItem="WK0-BN-XYT" secondAttribute="centerX" id="WcQ-hV-ez1"/>
                             <constraint firstItem="WK0-BN-XYT" firstAttribute="bottom" secondItem="SU5-31-61T" secondAttribute="bottom" id="c0g-sa-vEB"/>
+                            <constraint firstItem="WK0-BN-XYT" firstAttribute="trailing" secondItem="tY0-I0-XxM" secondAttribute="trailing" id="cNz-Gy-FzC"/>
                             <constraint firstItem="SU5-31-61T" firstAttribute="width" secondItem="2Oy-OA-2SC" secondAttribute="width" id="h5O-g9-FpU"/>
+                            <constraint firstAttribute="bottom" secondItem="tY0-I0-XxM" secondAttribute="bottom" id="lDC-21-cQO"/>
+                            <constraint firstItem="tY0-I0-XxM" firstAttribute="leading" secondItem="WK0-BN-XYT" secondAttribute="leading" id="rOh-V6-FTt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WK0-BN-XYT"/>
                     </view>
-                    <navigationItem key="navigationItem" id="3co-Ho-QuC"/>
+                    <navigationItem key="navigationItem" title="Drive Eye" id="3co-Ho-QuC"/>
                     <connections>
                         <outlet property="btnFacebook" destination="Ahu-HU-d6N" id="G9Y-k8-2Vh"/>
                         <outlet property="btnLogin" destination="8S6-q7-E53" id="Pft-FJ-Ahr"/>
@@ -167,10 +172,10 @@ FlBhc3N3b3JkA
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1015"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ao0-Za-qIt">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ao0-Za-qIt">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="1015"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ucf-CI-6sf">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ucf-CI-6sf">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="943.5"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ProfileImage" translatesAutoresizingMaskIntoConstraints="NO" id="qyQ-PG-Ikq">
@@ -351,7 +356,7 @@ FlBhc3N3b3JkA
                                                     <constraint firstItem="5Av-HR-AYJ" firstAttribute="leading" secondItem="7NJ-F6-rLM" secondAttribute="leading" id="iLK-HP-ZfW"/>
                                                 </constraints>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nih-rJ-Zwz">
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nih-rJ-Zwz">
                                                 <rect key="frame" x="20" y="903.5" width="335" height="32"/>
                                                 <color key="backgroundColor" red="0.13862577079999999" green="0.61978417630000004" blue="0.66321384910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
@@ -583,6 +588,7 @@ FlBhc3N3b3JkA
     <resources>
         <image name="DriveEyeLogo" width="410" height="410"/>
         <image name="ProfileImage" width="225" height="225"/>
+        <image name="Purple-Blue-Bubbles" width="640" height="1136"/>
         <image name="car_image" width="225" height="225"/>
     </resources>
 </document>

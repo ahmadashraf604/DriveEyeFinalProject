@@ -20,6 +20,8 @@ class CoachTableViewController: UITableViewController  ,CoachViewProtocol{
         presenter.attachView(view: self)
         coaches = Coach.getAllCoaches()
 //        presenter.getAllCoach()
+        
+        self.tableView.backgroundView = UIImageView(image: UIImage(named: "Purple-Blue-Bubbles"))
     }
     
     func displayData(coaches: [Coach]) {
@@ -50,7 +52,7 @@ class CoachTableViewController: UITableViewController  ,CoachViewProtocol{
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CoachIdentifier", for: indexPath) as! CoachTVCell
         cell.title.text = coaches[indexPath.row].title
-        
+        cell.coachImage.image = coaches[indexPath.row].image
         return cell
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
