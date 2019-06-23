@@ -43,6 +43,7 @@ class SeasonTableViewController: UITableViewController , SeasonViewProtocol {
             let controllers = split.viewControllers
             seasonDeatailsViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? SeasonDetailsViewController
         }
+        self.tableView.backgroundView = UIImageView(image: UIImage(named: "Purple-Blue-Bubbles"))
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)

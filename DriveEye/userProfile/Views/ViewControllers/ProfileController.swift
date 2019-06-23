@@ -50,11 +50,22 @@ class ProfileController: UIViewController , UserProfileDelegate {
     
     let imgUrl = "https://driveeye.herokuapp.com"
     let bagdeUrl = "https://driveeye.herokuapp.com"
-    var badges:UIImage = #imageLiteral(resourceName: "icons8-user-male-400")
     
+    override func viewDidLoad() {
+        if userImage != nil{
+        userImage.roundedImg()
+        }
+        if profileImg != nil {
+        profileImg.roundedImg()
+        }
+        if collectionViewBadges != nil {
+            
+        }
+    }
     override func viewWillAppear(_ animated: Bool) {
         presenter.attachView(delegate: self)
-        presenter.getUserData(id: 1)
+        presenter.getUserData(id: Utils.getCurrentUserId())
+        
     }
     
     var userbadges = [UserSeasonBadgeCollection]()
@@ -110,6 +121,8 @@ extension ProfileController : UICollectionViewDelegate,UICollectionViewDataSourc
         
         let cell = collectionViewBadges.dequeueReusableCell(withReuseIdentifier: "badgeCell", for: indexPath)as? CollectionViewCellBadge
         cell?.bage.sd_setImage(with: URL(string: bagdeUrl + userbadges[indexPath.row].badge.image), placeholderImage: UIImage(named: "logo.png"))
+       cell?.layer.masksToBounds = true
+        //cell?.layer.cornerRadius = 4
         return cell!
     } 
 }

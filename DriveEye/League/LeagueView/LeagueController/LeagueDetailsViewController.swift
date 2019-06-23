@@ -15,7 +15,6 @@ class LeagueDetailsViewController: UIViewController, UITableViewDelegate, UITabl
     var users = [UserLeague]()
     
     @IBOutlet weak var leagueNameLabel: UILabel!
-    @IBOutlet weak var leagueOwnerLabel: UILabel!
     @IBOutlet weak var leagueCodeLabel: UILabel!
     @IBOutlet weak var leagueTableView: UITableView!
     
@@ -28,7 +27,6 @@ class LeagueDetailsViewController: UIViewController, UITableViewDelegate, UITabl
     override func viewWillAppear(_ animated: Bool) {
         leagueNameLabel.text = league.name
         leagueCodeLabel.text = league.code
-        leagueOwnerLabel.text = String(league.ownerID)
         presenter.getUsers(leagueID: league.leagueID)
     }
     

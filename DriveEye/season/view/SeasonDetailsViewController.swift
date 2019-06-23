@@ -44,8 +44,8 @@ class SeasonDetailsViewController: UIViewController , UITableViewDelegate, UITab
     func configureView() {
         // Update the user interface for the detail item.
         if let detail = detailItem {
-            startDateLabel?.text = detail.endDate
-            endDateLabel?.text = detail.startDate
+            startDateLabel?.text = "Start Date: " + detail.endDate
+            endDateLabel?.text = "End Date: " + detail.startDate
             seasonDetailsPresenter?.getSeasonUsers(seasonId: detail.seasonID)
         }
     }

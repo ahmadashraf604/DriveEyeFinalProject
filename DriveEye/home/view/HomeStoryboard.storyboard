@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="a14-3J-8Yo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="a14-3J-8Yo">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="96c-0D-Vk1">
-                                <rect key="frame" x="137.5" y="550" width="99" height="39"/>
+                                <rect key="frame" x="138" y="550" width="99" height="39"/>
                                 <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="  start trip  ">
@@ -137,6 +137,16 @@
             </objects>
             <point key="canvasLocation" x="1320.8" y="57.121439280359823"/>
         </scene>
+        <!--Profile-->
+        <scene sceneID="LQF-g2-88t">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Profile" id="7XZ-rM-qdr" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="van-HJ-Ujn"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6PJ-lO-eqn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1077" y="-479"/>
+        </scene>
         <!--League-->
         <scene sceneID="7Cv-kz-VqT">
             <objects>
@@ -183,6 +193,7 @@
                         <segue destination="H81-dw-dTn" kind="relationship" relationship="viewControllers" id="l1L-gT-5jr"/>
                         <segue destination="j0E-iD-wZs" kind="relationship" relationship="viewControllers" id="b5W-MH-6wD"/>
                         <segue destination="wvJ-0C-S6n" kind="relationship" relationship="viewControllers" id="ilX-ke-ymV"/>
+                        <segue destination="7XZ-rM-qdr" kind="relationship" relationship="viewControllers" id="aP7-eP-C5a"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="61J-Ge-keF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -191,6 +202,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="home" width="30" height="30"/>
+        <image name="home" width="22.5" height="22.5"/>
     </resources>
 </document>

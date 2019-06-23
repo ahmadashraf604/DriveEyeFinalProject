@@ -17,7 +17,7 @@ extension UIImageView {
         self.clipsToBounds = true
         
         self.layer.borderColor = UIColor.white.cgColor
-        self.layer.borderWidth = 3
+        self.layer.borderWidth = 1
     }
     
 

@@ -38,7 +38,7 @@ class EditProfileViewController: UIViewController {
     }
     
 
-    @IBAction func dontBtnTapped(_ sender: Any) {
+    @IBAction func doneBtnTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     

@@ -24,20 +24,18 @@ class HomeView: UIViewController,CLLocationManagerDelegate  , HomeViewProtocol {
         presenter =  HomePresenter(model: HomeModelIMP())
         trip = Trip()
         presenter.attachView(view: self)
-        presenter.getHomeInfo(id: 1)
-        print(Utils.getCurrentUserId())
+        presenter.getHomeInfo(id: Utils.getCurrentUserId())
         Spinner.start()
     }
 
     func initHome(_ home: Home) {
         Spinner.stop()
-        print(home.seasonNUmber)
         leveLBL.text=String(home.userLevel)
         sesonNumberLBL.text=String(home.seasonNUmber)
         scoreLBL.text=String(home.score)
         daysLeftLBL.text=String(home.daysLeft)
-        
     }
+    
     @IBAction func startTribAction(_ sender: UIButton) {
         switch btnStartTrip.currentTitle! {
         case "  start trip  ":
@@ -62,8 +60,8 @@ class HomeView: UIViewController,CLLocationManagerDelegate  , HomeViewProtocol {
         timeLBL.text = convertNumberToTime(time: seconds)
     }
     func convertNumberToTime(time : Int) -> String{
-        let seconds = time % 60
-        let minutes = time/60
+        _ = time % 60
+        _ = time/60
         return "\(time / 60 < 10 ? time / 60 : time / 60):\(time % 60 < 10 ? time % 60 : time % 60)"
 //        " \(minutes ) : \( seconds)"
         

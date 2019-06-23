@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5261A4A122BFF95E006B22AC /* DesignableFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5261A4A022BFF95E006B22AC /* DesignableFile.swift */; };
 		52723B1B22BEAAB20064C015 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52723B0D22BEAAB20064C015 /* ProfilePresenter.swift */; };
 		52723B1C22BEAAB20064C015 /* UserProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52723B0F22BEAAB20064C015 /* UserProfileModel.swift */; };
 		52723B1D22BEAAB20064C015 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52723B1122BEAAB20064C015 /* Profile.storyboard */; };
@@ -125,6 +126,7 @@
 /* Begin PBXFileReference section */
 		0DDC6EAF60C140A42C0D8DDF /* Pods_DriveEyeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DriveEyeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E9A4A90E2E8406D9E262BD9 /* Pods-DriveEyeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DriveEyeTests.release.xcconfig"; path = "Target Support Files/Pods-DriveEyeTests/Pods-DriveEyeTests.release.xcconfig"; sourceTree = "<group>"; };
+		5261A4A022BFF95E006B22AC /* DesignableFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableFile.swift; sourceTree = "<group>"; };
 		52723B0D22BEAAB20064C015 /* ProfilePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		52723B0F22BEAAB20064C015 /* UserProfileModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileModel.swift; sourceTree = "<group>"; };
 		52723B1122BEAAB20064C015 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
@@ -434,6 +436,7 @@
 			children = (
 				DC36A3D722BBAFD0008B46F5 /* Spinner.swift */,
 				DC592B9522BD3EEB0004A7A9 /* NoDataMessageView.swift */,
+				5261A4A022BFF95E006B22AC /* DesignableFile.swift */,
 			);
 			path = utility;
 			sourceTree = "<group>";
@@ -1020,6 +1023,7 @@
 				A3919C3822B531AD006248FE /* CitiesResponse.swift in Sources */,
 				52723B2222BEAAB20064C015 /* BorderButton.swift in Sources */,
 				DC974F6222A2CD65009993C9 /* SeasonTableViewController.swift in Sources */,
+				5261A4A122BFF95E006B22AC /* DesignableFile.swift in Sources */,
 				DC974F5522A2CD65009993C9 /* Season.swift in Sources */,
 				DC8FBA4322A2FAE500973FF5 /* HomeViewProtocol.swift in Sources */,
 				A34249BE22B4181900FA24F9 /* UserResponse.swift in Sources */,
@@ -1156,6 +1160,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -1213,6 +1218,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
