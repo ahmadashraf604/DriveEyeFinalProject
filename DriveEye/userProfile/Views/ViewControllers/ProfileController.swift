@@ -79,7 +79,7 @@ class ProfileController: UIViewController , UserProfileDelegate {
         
         if firstView != nil {
             userNameLabel.text = user.firstName
-            userLevelLabel.text = "level: \(String(user.level))"
+            userLevelLabel.text = "Level: \(String(user.level))"
         }else if userEmail != nil{
             userFirstName.text = user.firstName
             userLastName.text = user.lastName

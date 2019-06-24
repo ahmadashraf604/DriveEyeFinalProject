@@ -27,6 +27,10 @@ class LeagueViewController: UIViewController, UITableViewDataSource, UITableView
         
         leagueDetailsVC = self.storyboard?.instantiateViewController(withIdentifier: "leagueDetailsVC") as! LeagueDetailsViewController
         presenter = LeaguePresenter(leagueVC: self)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         presenter.getLeague()
     }
     

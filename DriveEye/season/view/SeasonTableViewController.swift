@@ -37,7 +37,7 @@ class SeasonTableViewController: UITableViewController , SeasonViewProtocol {
         super.viewDidLoad()
         self.splitViewController?.preferredDisplayMode = .primaryOverlay
         seasonsPresenter = SeasonsPresenter(seasonViewProtocol: self)
-        seasonsPresenter.getSeasonList()
+     
         
         if let split = splitViewController {
             let controllers = split.viewControllers
@@ -45,6 +45,12 @@ class SeasonTableViewController: UITableViewController , SeasonViewProtocol {
         }
         self.tableView.backgroundView = UIImageView(image: UIImage(named: "Purple-Blue-Bubbles"))
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+           seasonsPresenter.getSeasonList()
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.splitViewController?.preferredDisplayMode = .automatic
