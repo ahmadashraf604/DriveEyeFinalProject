@@ -26,7 +26,7 @@ class HomePresenter: NSObject   {
             }
         })
     }
-    func addTrip(trip : Trip ,_ tripHandler : (Int)->()) {
+    func addTrip(trip : Trip ,_ tripHandler : @escaping (Int)->()) {
         model.addNewTrip(trip,tripHandler)
     }
     func getHomeInfo(id:Int){

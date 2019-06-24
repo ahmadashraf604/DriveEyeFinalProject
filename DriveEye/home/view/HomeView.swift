@@ -122,14 +122,14 @@ class HomeView: UIViewController,CLLocationManagerDelegate  , HomeViewProtocol {
         trip.endPoint=endpoint
         presenter.addTrip(trip:trip, {score in
             
-            presenter.getHomeInfo(id: Utils.getCurrentUserId())
+            self.presenter.getHomeInfo(id: Utils.getCurrentUserId())
             Spinner.stop()
-            let vc = alertServices.alert(title: "Ended"
+            let vc = self.alertServices.alert(title: "Ended"
                 ,describtion: """
                 Score : \(score)
-                Start Location : \(trip.startPoint)
-                End Location : \(trip.endPoint)
-                duration : \(convertNumberToTime(time: seconds))
+                Start Location : \(self.trip.startPoint)
+                End Location : \(self.trip.endPoint)
+                duration : \(self.convertNumberToTime(time: self.seconds))
                 """)
 //            let homeScreen = UIStoryboard(name: "Coach", bundle: nil)
 //            let vc = homeScreen.instantiateViewController(withIdentifier: "TipsDetails")
@@ -146,7 +146,7 @@ class HomeView: UIViewController,CLLocationManagerDelegate  , HomeViewProtocol {
 //
 //            vc2.coachModel = c
             
-            seconds = 0
+            self.seconds = 0
             self.timeLBL.text = "00:00"
             self.present(vc, animated: true)
 

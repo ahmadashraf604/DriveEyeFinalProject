@@ -27,14 +27,15 @@ class HomeModelIMP{
             
         })
     }
-    func addNewTrip ( _ trip : Trip ,_ tripHandler : (Int)->()){
+    func addNewTrip ( _ trip : Trip ,_ tripHandler : @escaping (Int)->()){
         let randumScore = getRandomScore()
         let url = URL(string: "https://driveeye.herokuapp.com/trip/add")
         let parameter : [String : Any] = ["startPoint":trip.startPoint,"endPoint" : trip.endPoint,
                                           "duration"  : trip.duration,"userId" : Utils.getCurrentUserId() ,"score" : randumScore]
-        tripHandler(randumScore)
+        
         Alamofire.request(url!, method:.post, parameters: parameter)
             .responseJSON { response in
+                tripHandler(randumScore)
                 print(response)
                 
         }
