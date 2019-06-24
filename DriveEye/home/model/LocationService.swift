@@ -17,7 +17,6 @@ class LocationService: NSObject ,CLLocationManagerDelegate {
         guard let location : CLLocation = manager.location else{return}
         CLGeocoder().reverseGeocodeLocation(location)  {[weak self]placemarks ,error in
             self?.countryClouser?(placemarks?.first?.locality!, placemarks?.first?.country!, nil)
-            self?.countryClouser
         }
         locationManager.stopUpdatingLocation()
         

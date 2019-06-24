@@ -22,7 +22,7 @@ class UserModel {
         Alamofire.request(loginUrl, method: .post, parameters: parameters)
             .responseJSON { response in
                 print(response)
-                guard let data = response.data else { return }
+                guard response.data != nil else { return }
                 do {
                     let decoder = JSONDecoder()
                     let user = try decoder.decode(UserResponse.self, from: response.data!)
@@ -92,7 +92,7 @@ class UserModel {
             do {
                 print(response)
                 onSuccess(true)
-            } catch _ {
+            } catch{
                 print("error happened while adding a car")
             }
         })

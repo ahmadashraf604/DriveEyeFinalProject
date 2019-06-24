@@ -1,22 +1,26 @@
 PODS:
   - Alamofire (4.8.2)
+  - GDGauge (1.1.4)
   - SDWebImage (4.4.6):
     - SDWebImage/Core (= 4.4.6)
   - SDWebImage/Core (4.4.6)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
+  - GDGauge
   - SDWebImage (~> 4.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - GDGauge
     - SDWebImage
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  GDGauge: 645ee6933c6f95289e43ef93259a5788713e7010
   SDWebImage: 3f3f0c02f09798048c47a5ed0a13f17b063572d8
 
-PODFILE CHECKSUM: 5d52424bfa2e94ea70522417f0041b5bc5b5a7c2
+PODFILE CHECKSUM: 4324e5bbdfbd275c954f23aee51298c6dcedfd27
 
 COCOAPODS: 1.6.1
