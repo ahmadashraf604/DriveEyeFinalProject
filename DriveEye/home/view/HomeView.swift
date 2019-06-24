@@ -130,7 +130,16 @@ class HomeView: UIViewController,CLLocationManagerDelegate  , HomeViewProtocol {
                 Start Location : \(self.trip.startPoint)
                 End Location : \(self.trip.endPoint)
                 duration : \(self.convertNumberToTime(time: self.seconds))
-                """)
+                """, gotItOnClick: {
+                    let coaches = Coach.getAllCoaches()
+                    let i = Int(arc4random_uniform(3))
+                    print(i)
+                    let homeScreen = UIStoryboard(name: "Coach", bundle: nil)
+                    let vc = homeScreen.instantiateViewController(withIdentifier: "TipsDetails")
+                    let vc2 = vc as! TipDetailsViewController
+                    vc2.coachModel = coaches[i]
+                    self.present(vc, animated: true, completion: nil)
+            })
 //            let homeScreen = UIStoryboard(name: "Coach", bundle: nil)
 //            let vc = homeScreen.instantiateViewController(withIdentifier: "TipsDetails")
 //            let vc2 = vc as! TipDetailsViewController
