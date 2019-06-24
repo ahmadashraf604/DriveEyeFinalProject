@@ -23,11 +23,12 @@ class TipDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        definesPresentationContext = true
         stackView.addBackground(color: .white)
         img.image = coachModel.image
         tfTitle.text = coachModel.title
         tvDescription.text = coachModel.responseDescription
     }
+    
 
 }
