@@ -43,6 +43,8 @@
 		DC4B604F22B78F2A006EC7ED /* UIStackViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4B604E22B78F2A006EC7ED /* UIStackViewExtention.swift */; };
 		DC4EDB3022C007D4000D790C /* ColorExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4EDB2F22C007D4000D790C /* ColorExtention.swift */; };
 		DC592B9622BD3EEB0004A7A9 /* NoDataMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC592B9522BD3EEB0004A7A9 /* NoDataMessageView.swift */; };
+		DC655C2222C057A2003724A2 /* splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC655C2122C057A2003724A2 /* splash.storyboard */; };
+		DC655C2422C0581A003724A2 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC655C2322C0581A003724A2 /* SplashViewController.swift */; };
 		DC79C39722A2D35300E4590A /* AlertServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC79C39322A2D35200E4590A /* AlertServices.swift */; };
 		DC79C39822A2D35300E4590A /* AlertStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC79C39422A2D35200E4590A /* AlertStoryboard.storyboard */; };
 		DC79C39922A2D35300E4590A /* AlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC79C39522A2D35200E4590A /* AlertVC.swift */; };
@@ -167,6 +169,8 @@
 		DC4B604E22B78F2A006EC7ED /* UIStackViewExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackViewExtention.swift; sourceTree = "<group>"; };
 		DC4EDB2F22C007D4000D790C /* ColorExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtention.swift; sourceTree = "<group>"; };
 		DC592B9522BD3EEB0004A7A9 /* NoDataMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDataMessageView.swift; sourceTree = "<group>"; };
+		DC655C2122C057A2003724A2 /* splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = splash.storyboard; sourceTree = "<group>"; };
+		DC655C2322C0581A003724A2 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		DC79C39322A2D35200E4590A /* AlertServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertServices.swift; sourceTree = "<group>"; };
 		DC79C39422A2D35200E4590A /* AlertStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AlertStoryboard.storyboard; sourceTree = "<group>"; };
 		DC79C39522A2D35200E4590A /* AlertVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertVC.swift; sourceTree = "<group>"; };
@@ -455,6 +459,15 @@
 			path = empty;
 			sourceTree = "<group>";
 		};
+		DC655C2022C05777003724A2 /* splash */ = {
+			isa = PBXGroup;
+			children = (
+				DC655C2122C057A2003724A2 /* splash.storyboard */,
+				DC655C2322C0581A003724A2 /* SplashViewController.swift */,
+			);
+			path = splash;
+			sourceTree = "<group>";
+		};
 		DC79C39122A2D35200E4590A /* customViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -501,6 +514,7 @@
 		DC8012D122A2B89C001FE9CB /* DriveEye */ = {
 			isa = PBXGroup;
 			children = (
+				DC655C2022C05777003724A2 /* splash */,
 				52723B0B22BEAAB20064C015 /* userProfile */,
 				DC36A3D622BBAFA7008B46F5 /* utility */,
 				DC8FBA2C22A2F8B800973FF5 /* coach */,
@@ -893,6 +907,7 @@
 				DC8FBA4B22A2FB4600973FF5 /* HomeStoryboard.storyboard in Resources */,
 				DC8012DD22A2B89C001FE9CB /* Assets.xcassets in Resources */,
 				DC974F6522A2CE33009993C9 /* Season.storyboard in Resources */,
+				DC655C2222C057A2003724A2 /* splash.storyboard in Resources */,
 				52723B1D22BEAAB20064C015 /* Profile.storyboard in Resources */,
 				DC406E5822BCF65900F05C4B /* emptyCollection.xib in Resources */,
 				A34249C422B419D600FA24F9 /* logo.png in Resources */,
@@ -1048,6 +1063,7 @@
 				A34249BC22B4175000FA24F9 /* UserModel.swift in Sources */,
 				DC80132722A2BC71001FE9CB /* LeaguePresenter.swift in Sources */,
 				A34249B422B413FC00FA24F9 /* Utils.swift in Sources */,
+				DC655C2422C0581A003724A2 /* SplashViewController.swift in Sources */,
 				DC79C39922A2D35300E4590A /* AlertVC.swift in Sources */,
 				DC80132F22A2BDDF001FE9CB /* LeagueViewController.swift in Sources */,
 				DC974F5722A2CD65009993C9 /* SeasonUser.swift in Sources */,
