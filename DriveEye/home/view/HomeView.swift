@@ -98,7 +98,6 @@ class HomeView: UIViewController,CLLocationManagerDelegate  , HomeViewProtocol {
             timer.invalidate()
             presenter.getEndLoation()
             trip.duration=Double(seconds)
-                presenter.getHomeInfo(id: Utils.getCurrentUserId())
 
         default:
             break
@@ -122,6 +121,8 @@ class HomeView: UIViewController,CLLocationManagerDelegate  , HomeViewProtocol {
         print("start point \(endpoint)")
         trip.endPoint=endpoint
         presenter.addTrip(trip:trip, {score in
+            
+            presenter.getHomeInfo(id: Utils.getCurrentUserId())
             Spinner.stop()
             let vc = alertServices.alert(title: "Ended"
                 ,describtion: """
