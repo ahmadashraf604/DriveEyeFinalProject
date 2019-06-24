@@ -453,6 +453,7 @@
 		DC406E5922BCFBCB00F05C4B /* empty */ = {
 			isa = PBXGroup;
 			children = (
+				DC79C39222A2D35200E4590A /* alert */,
 				DC406E5722BCF65900F05C4B /* emptyCollection.xib */,
 				DC406E5A22BCFC6400F05C4B /* EmptyViewController.swift */,
 			);
@@ -472,7 +473,6 @@
 			isa = PBXGroup;
 			children = (
 				DC406E5922BCFBCB00F05C4B /* empty */,
-				DC79C39222A2D35200E4590A /* alert */,
 				DC79C39622A2D35200E4590A /* UIButtonExtention.swift */,
 				DC4B604E22B78F2A006EC7ED /* UIStackViewExtention.swift */,
 			);
