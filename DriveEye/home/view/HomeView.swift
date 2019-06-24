@@ -6,7 +6,7 @@ import GDGauge
 
 
 class HomeView: UIViewController,CLLocationManagerDelegate  , HomeViewProtocol {
-    
+
     @IBOutlet weak var leveLBL: UILabel!
     @IBOutlet weak var sesonNumberLBL: UILabel!
     @IBOutlet weak var scoreLBL: UILabel!
@@ -16,17 +16,17 @@ class HomeView: UIViewController,CLLocationManagerDelegate  , HomeViewProtocol {
     var seconds = 0
     var timer = Timer()
     let alertServices = AlertServices ()
-    
+
     var seasonsDays: GDGaugeView!
     var levelGauge: GDGaugeView!
-    
+
     var trip : Trip!
     var presenter : HomePresenter! = nil
     override func viewDidLoad() {
         super.viewDidLoad()
         let shapeWidth:CGFloat = CGFloat(300)
         let shapeHieght:CGFloat = CGFloat(300)
-        
+
         seasonsDays = GDGaugeView(frame: CGRect(x: CGFloat( view.bounds.width - (CGFloat(8) + shapeWidth)), y: CGFloat(90), width: shapeWidth, height: shapeHieght))
         levelGauge = GDGaugeView(frame: CGRect(x: CGFloat(8), y: CGFloat(90), width: shapeWidth, height: shapeHieght))
         presenter =  HomePresenter(model: HomeModelIMP())
@@ -34,7 +34,7 @@ class HomeView: UIViewController,CLLocationManagerDelegate  , HomeViewProtocol {
         presenter.attachView(view: self)
         presenter.getHomeInfo(id: Utils.getCurrentUserId())
         Spinner.start()
-        
+
         seasonsDays.baseColor = UIColor.red
         seasonsDays.showBorder = true
         seasonsDays.fullBorder = false
@@ -52,9 +52,9 @@ class HomeView: UIViewController,CLLocationManagerDelegate  , HomeViewProtocol {
         view.addSubview(seasonsDays)
         seasonsDays.setupView()
         seasonsDays.currentValue = 0
-        
-        
-        
+
+
+
         levelGauge.baseColor = UIColor.fizCuz
         levelGauge.showBorder = true
         levelGauge.fullBorder = false
@@ -72,7 +72,7 @@ class HomeView: UIViewController,CLLocationManagerDelegate  , HomeViewProtocol {
         view.addSubview(levelGauge)
         levelGauge.setupView()
     }
-    
+
     func initHome(_ home: Home) {
         Spinner.stop()
         print(home.seasonNUmber)
@@ -82,15 +82,16 @@ class HomeView: UIViewController,CLLocationManagerDelegate  , HomeViewProtocol {
         seasonsDays.currentValue = CGFloat(home.daysLeft>30 ? 30: home.daysLeft < 0 ? 0 : home.daysLeft)
         levelGauge.currentValue = CGFloat((home.userLevel % 10)*10)
         //        seasonsDays.updateColors(with: UIColor.fizCuz, unitsColor: UIColor.red)
-        
+
     }
+
     @IBAction func startTribAction(_ sender: UIButton) {
         switch btnStartTrip.currentTitle! {
         case "  Start trip  ":
             timer=Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector (timeAction), userInfo: nil, repeats: true)
             btnStartTrip.setTitle("  End trip  ", for: .normal)
             presenter.getStartLoation()
-            
+
         case "  End trip  ":
             Spinner.start()
             btnStartTrip.setTitle("  Start trip  ", for: .normal)
@@ -98,7 +99,7 @@ class HomeView: UIViewController,CLLocationManagerDelegate  , HomeViewProtocol {
             presenter.getEndLoation()
             trip.duration=Double(seconds)
                 presenter.getHomeInfo(id: Utils.getCurrentUserId())
-            
+
         default:
             break
         }
@@ -109,9 +110,9 @@ class HomeView: UIViewController,CLLocationManagerDelegate  , HomeViewProtocol {
     }
     func convertNumberToTime(time : Int) -> String{
         return "\(time / 60 < 10 ? time / 60 : time / 60):\(time % 60 < 10 ? time % 60 : time % 60)"
-        
+
     }
-    
+
     func setStartPoint(_ startpoint: String) {
         print("start point \(startpoint)")
         trip.startPoint=startpoint

@@ -8,17 +8,17 @@ import Foundation
 // MARK: - UserResponse
 struct UserResponse: Codable {
     let status: Bool
-    let response: User
+    let response: UserInfo
 }
 
 // MARK: - Response
-struct User: Codable {
+struct UserInfo: Codable {
     let userID: Int
     let firstName, lastName, email, birthdate: String
     let level: Int
-    let password: JSONNull?
+    let password: String?
     let image: String
-    let car: CarInfo
+    let car: CarInfo?
     let city: CityInfo
     let userSeasonBadgeCollection: [UserSeasonBadgeCollection]?
     
@@ -32,7 +32,7 @@ struct User: Codable {
 struct CarInfo: Codable {
     let carID: Int
     let brand, model: String?
-    let image, releaseyear: JSONNull?
+    let image, releaseyear: String?
     
     enum CodingKeys: String, CodingKey {
         case carID = "carId"
@@ -54,7 +54,7 @@ struct CityInfo: Codable {
 // MARK: - UserSeasonBadgeCollection
 struct UserSeasonBadgeCollection: Codable {
     let badge: Badge
-    let season: JSONNull?
+    let season: String?
 }
 
 // MARK: - Badge

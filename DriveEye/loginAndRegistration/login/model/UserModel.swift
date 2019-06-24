@@ -21,19 +21,16 @@ class UserModel {
         ]
         Alamofire.request(loginUrl, method: .post, parameters: parameters)
             .responseJSON { response in
-                
-                if response.result.isSuccess {
-                    guard let data = response.data else { return }
-                    do {
-                       // print(response)
-                        let user = try JSONDecoder().decode(UserResponse.self, from: data)
-                       // print(user.status)
-                        closure(user)
-                        
-                    } catch _ {
-                         closure(nil)
-                       // print("user is \(error)")
-                    }
+                print(response)
+                guard let data = response.data else { return }
+                do {
+                    let decoder = JSONDecoder()
+                    let user = try decoder.decode(UserResponse.self, from: response.data!)
+                    print(user)
+                    closure(user)
+                } catch _ {
+                    closure(nil)
+
                 }
         }
         
@@ -67,13 +64,15 @@ class UserModel {
         Alamofire.request(registerUrl, method: .post, parameters: parameters)
             .responseJSON { response in
                 guard let data = response.data else { return }
+                print(response)
                 do {
                     let decoder = JSONDecoder()
                     let user = try decoder.decode(UserResponse.self, from: data)
                     print(user)
                     closure(user)
-                } catch _ {
+                } catch let error{
                     closure(nil)
+                    print(error)
                 }
         }
     }

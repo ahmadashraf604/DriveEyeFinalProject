@@ -21,7 +21,7 @@ class LeagueDetailsPresenter {
     
     func getUsers(leagueID: Int) {
         leagueModel.getLeagueUsers(leagueID: leagueID, responseHandle: {(users) in
-            self.leagueVC.setLeagueUsers(users: users)
+            self.leagueVC.setLeagueUsers(users: users.sorted(by: {$0.rank < $1.rank}))
         },errorHandle: {(status, error) in
             if status {
                 self.leagueVC.displayNoData()
