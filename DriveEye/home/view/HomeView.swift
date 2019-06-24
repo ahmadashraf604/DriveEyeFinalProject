@@ -122,7 +122,7 @@ class HomeView: UIViewController,CLLocationManagerDelegate  , HomeViewProtocol {
         trip.endPoint=endpoint
         presenter.addTrip(trip:trip, {score in
             Spinner.stop()
-            let alert = alertServices.alert(title: "ended"
+            let alert = alertServices.alert(title: "Ended"
                 ,describtion: """
                 Score : \(score)
                 Start Location : \(trip.startPoint)
