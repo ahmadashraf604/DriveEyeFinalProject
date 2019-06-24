@@ -13,6 +13,7 @@ class AlertVC: UIViewController {
     var titlelable : String  = ""
     var descriptionlable : String = ""
 
+    @IBOutlet weak var parentView: UIView!
     @IBOutlet weak var coachTitle: UILabel!
     @IBOutlet weak var coachDescription: UILabel!
     @IBOutlet weak var coachImage: UIImageView!
@@ -24,6 +25,7 @@ class AlertVC: UIViewController {
 
         coachTitle.text = titlelable
         coachDescription.text = descriptionlable
+        parentView.layer.cornerRadius = 10
     }
 
     override func didReceiveMemoryWarning() {

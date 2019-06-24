@@ -49,7 +49,7 @@
                                                 </constraints>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.29640631070000001" green="0.74392206549999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.13725490196078433" green="0.61960784313725492" blue="0.66274509803921566" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="RIE-2d-ezx" firstAttribute="leading" secondItem="Qb7-uB-dDG" secondAttribute="leading" id="J63-ji-Lag"/>
                                             <constraint firstAttribute="trailing" secondItem="RIE-2d-ezx" secondAttribute="trailing" id="RBT-aR-eOj"/>
@@ -105,6 +105,7 @@
                         <outlet property="coachDescription" destination="sfb-db-mmL" id="hJx-zG-110"/>
                         <outlet property="coachImage" destination="LlQ-TO-MZY" id="9C5-1k-eCQ"/>
                         <outlet property="coachTitle" destination="y0a-Oh-4Gq" id="PEx-re-uAz"/>
+                        <outlet property="parentView" destination="h8h-bh-Ues" id="3ki-sv-uPh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XSu-nb-tiq" userLabel="First Responder" sceneMemberID="firstResponder"/>

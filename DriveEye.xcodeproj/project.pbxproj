@@ -31,6 +31,7 @@
 		DC406E5B22BCFC6400F05C4B /* EmptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC406E5A22BCFC6400F05C4B /* EmptyViewController.swift */; };
 		DC46BE2622B41D8B0071E567 /* SeasonSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC46BE2522B41D8B0071E567 /* SeasonSplitViewController.swift */; };
 		DC4B604F22B78F2A006EC7ED /* UIStackViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4B604E22B78F2A006EC7ED /* UIStackViewExtention.swift */; };
+		DC4EDB3022C007D4000D790C /* ColorExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4EDB2F22C007D4000D790C /* ColorExtention.swift */; };
 		DC592B9622BD3EEB0004A7A9 /* NoDataMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC592B9522BD3EEB0004A7A9 /* NoDataMessageView.swift */; };
 		DC79C39722A2D35300E4590A /* AlertServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC79C39322A2D35200E4590A /* AlertServices.swift */; };
 		DC79C39822A2D35300E4590A /* AlertStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC79C39422A2D35200E4590A /* AlertStoryboard.storyboard */; };
@@ -144,6 +145,7 @@
 		DC406E5A22BCFC6400F05C4B /* EmptyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViewController.swift; sourceTree = "<group>"; };
 		DC46BE2522B41D8B0071E567 /* SeasonSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonSplitViewController.swift; sourceTree = "<group>"; };
 		DC4B604E22B78F2A006EC7ED /* UIStackViewExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackViewExtention.swift; sourceTree = "<group>"; };
+		DC4EDB2F22C007D4000D790C /* ColorExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtention.swift; sourceTree = "<group>"; };
 		DC592B9522BD3EEB0004A7A9 /* NoDataMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDataMessageView.swift; sourceTree = "<group>"; };
 		DC79C39322A2D35200E4590A /* AlertServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertServices.swift; sourceTree = "<group>"; };
 		DC79C39422A2D35200E4590A /* AlertStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AlertStoryboard.storyboard; sourceTree = "<group>"; };
@@ -363,6 +365,7 @@
 			children = (
 				DC36A3D722BBAFD0008B46F5 /* Spinner.swift */,
 				DC592B9522BD3EEB0004A7A9 /* NoDataMessageView.swift */,
+				DC4EDB2F22C007D4000D790C /* ColorExtention.swift */,
 			);
 			path = utility;
 			sourceTree = "<group>";
@@ -882,11 +885,13 @@
 				"${PODS_ROOT}/Target Support Files/Pods-DriveEye/Pods-DriveEye-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/GDGauge/GDGauge.framework",
+				"${BUILT_PRODUCTS_DIR}/LinearProgressBar/LinearProgressBar.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GDGauge.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LinearProgressBar.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -971,6 +976,7 @@
 				DC80132522A2BC44001FE9CB /* LeagueDetailsPresenter.swift in Sources */,
 				A34249BA22B4170000FA24F9 /* LoginPresenter.swift in Sources */,
 				DC80131D22A2BB8F001FE9CB /* LeagueResponse.swift in Sources */,
+				DC4EDB3022C007D4000D790C /* ColorExtention.swift in Sources */,
 				DC974F5A22A2CD65009993C9 /* SeasonDetailsPresenter.swift in Sources */,
 				DC974F5822A2CD65009993C9 /* SeasonUsersResponse.swift in Sources */,
 				A34249C022B4186C00FA24F9 /* LoginViewController.swift in Sources */,

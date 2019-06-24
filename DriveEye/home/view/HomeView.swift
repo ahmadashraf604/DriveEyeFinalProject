@@ -17,62 +17,88 @@ class HomeView: UIViewController,CLLocationManagerDelegate  , HomeViewProtocol {
     var timer = Timer()
     let alertServices = AlertServices ()
     
-    var gaugeView: GDGaugeView!
+    var seasonsDays: GDGaugeView!
+    var levelGauge: GDGaugeView!
     
     var trip : Trip!
     var presenter : HomePresenter! = nil
     override func viewDidLoad() {
         super.viewDidLoad()
-        gaugeView = GDGaugeView(frame: view.bounds)
+        let shapeWidth:CGFloat = CGFloat(300)
+        let shapeHieght:CGFloat = CGFloat(300)
+        
+        seasonsDays = GDGaugeView(frame: CGRect(x: CGFloat( view.bounds.width - (CGFloat(8) + shapeWidth)), y: CGFloat(90), width: shapeWidth, height: shapeHieght))
+        levelGauge = GDGaugeView(frame: CGRect(x: CGFloat(8), y: CGFloat(90), width: shapeWidth, height: shapeHieght))
         presenter =  HomePresenter(model: HomeModelIMP())
         trip = Trip()
         presenter.attachView(view: self)
-        presenter.getHomeInfo(id: 2)
+        presenter.getHomeInfo(id: Utils.getCurrentUserId())
         Spinner.start()
         
-        gaugeView.baseColor = UIColor.gray
-        gaugeView.showBorder = true
-        gaugeView.fullBorder = false
-        gaugeView.startDegree = 45.0
-        gaugeView.endDegree = 315.0
-        gaugeView.min = 0
-        gaugeView.max = 30
-        gaugeView.stepValue = 2
-        gaugeView.handleColor = UIColor.red
-        gaugeView.sepratorColor = UIColor.brown
-        gaugeView.textColor = UIColor.black
-        gaugeView.unitText = "Day Left"
-        gaugeView.unitTextFont = UIFont.systemFont(ofSize: 20)
-        gaugeView.textFont = UIFont.systemFont(ofSize: 20)
-        view.addSubview(gaugeView)
-        gaugeView.setupView()
+        seasonsDays.baseColor = UIColor.red
+        seasonsDays.showBorder = true
+        seasonsDays.fullBorder = false
+        seasonsDays.startDegree = 225.0
+        seasonsDays.endDegree = 315.0
+        seasonsDays.min = 0
+        seasonsDays.max = 30
+        seasonsDays.stepValue = 5
+        seasonsDays.handleColor = UIColor.red
+        seasonsDays.sepratorColor = UIColor.fizCuz
+        seasonsDays.textColor = UIColor.black
+        seasonsDays.unitText = "Days Left"
+        seasonsDays.unitTextFont = UIFont.systemFont(ofSize: 10)
+        seasonsDays.textFont = UIFont.systemFont(ofSize: 14)
+        view.addSubview(seasonsDays)
+        seasonsDays.setupView()
+        seasonsDays.currentValue = 0
+        
+        
+        
+        levelGauge.baseColor = UIColor.fizCuz
+        levelGauge.showBorder = true
+        levelGauge.fullBorder = false
+        levelGauge.startDegree = 45.0
+        levelGauge.endDegree = 135.0
+        levelGauge.min = 0
+        levelGauge.max = 100
+        levelGauge.stepValue = 20
+        levelGauge.handleColor = UIColor.fizCuz
+        levelGauge.sepratorColor = UIColor.red
+        levelGauge.textColor = UIColor.black
+        levelGauge.unitText = ""
+        levelGauge.unitTextFont = UIFont.systemFont(ofSize: 14)
+        levelGauge.textFont = UIFont.systemFont(ofSize: 14)
+        view.addSubview(levelGauge)
+        levelGauge.setupView()
     }
     
     func initHome(_ home: Home) {
         Spinner.stop()
         print(home.seasonNUmber)
-        leveLBL.text=String(home.userLevel)
+        leveLBL.text=String((home.userLevel / 10)+1)
         sesonNumberLBL.text=String(home.seasonNUmber)
         scoreLBL.text=String(home.score)
-        daysLeftLBL.text=String(home.daysLeft)
-        gaugeView.currentValue = CGFloat(home.daysLeft)
+        seasonsDays.currentValue = CGFloat(home.daysLeft>30 ? 30: home.daysLeft < 0 ? 0 : home.daysLeft)
+        levelGauge.currentValue = CGFloat((home.userLevel % 10)*10)
+        //        seasonsDays.updateColors(with: UIColor.fizCuz, unitsColor: UIColor.red)
         
     }
     @IBAction func startTribAction(_ sender: UIButton) {
         switch btnStartTrip.currentTitle! {
-        case "  start trip  ":
+        case "  Start trip  ":
             timer=Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector (timeAction), userInfo: nil, repeats: true)
-            btnStartTrip.setTitle("  end trip  ", for: .normal)
+            btnStartTrip.setTitle("  End trip  ", for: .normal)
             presenter.getStartLoation()
             
-        case "  end trip  ":
-            btnStartTrip.setTitle("  start trip  ", for: .normal)
+        case "  End trip  ":
+            Spinner.start()
+            btnStartTrip.setTitle("  Start trip  ", for: .normal)
             timer.invalidate()
             presenter.getEndLoation()
             trip.duration=Double(seconds)
-            let alert = alertServices.alert(title: "ended" ,describtion: " duration = \(convertNumberToTime(time: seconds))")
-            present(alert, animated: true)
-            seconds = 0
+                presenter.getHomeInfo(id: Utils.getCurrentUserId())
+            
         default:
             break
         }
@@ -82,10 +108,7 @@ class HomeView: UIViewController,CLLocationManagerDelegate  , HomeViewProtocol {
         timeLBL.text = convertNumberToTime(time: seconds)
     }
     func convertNumberToTime(time : Int) -> String{
-        let seconds = time % 60
-        let minutes = time/60
         return "\(time / 60 < 10 ? time / 60 : time / 60):\(time % 60 < 10 ? time % 60 : time % 60)"
-        //        " \(minutes ) : \( seconds)"
         
     }
     
@@ -97,6 +120,17 @@ class HomeView: UIViewController,CLLocationManagerDelegate  , HomeViewProtocol {
     func setEndPoint(_ endpoint: String) {
         print("start point \(endpoint)")
         trip.endPoint=endpoint
-        presenter.addTrip(trip:trip)
+        presenter.addTrip(trip:trip, {score in
+            Spinner.stop()
+            let alert = alertServices.alert(title: "ended"
+                ,describtion: """
+                Score : \(score)
+                Start Location : \(trip.startPoint)
+                End Location : \(trip.endPoint)
+                duration : \(convertNumberToTime(time: seconds))
+                """)
+            self.present(alert, animated: true)
+            seconds = 0
+        })
     }
 }
