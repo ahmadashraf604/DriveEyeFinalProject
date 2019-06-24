@@ -123,15 +123,32 @@ class HomeView: UIViewController,CLLocationManagerDelegate  , HomeViewProtocol {
         trip.endPoint=endpoint
         presenter.addTrip(trip:trip, {score in
             Spinner.stop()
-            let alert = alertServices.alert(title: "Ended"
-                ,describtion: """
-                Score : \(score)
-                Start Location : \(trip.startPoint)
-                End Location : \(trip.endPoint)
-                duration : \(convertNumberToTime(time: seconds))
-                """)
-            self.present(alert, animated: true)
+//            let alert = alertServices.alert(title: "Ended"
+//                ,describtion: """
+//                Score : \(score)
+//                Start Location : \(trip.startPoint)
+//                End Location : \(trip.endPoint)
+//                duration : \(convertNumberToTime(time: seconds))
+//                """)
+            let homeScreen = UIStoryboard(name: "Coach", bundle: nil)
+            let vc = homeScreen.instantiateViewController(withIdentifier: "TipsDetails")
+            let vc2 = vc as! TipDetailsViewController
+            
+            let describtion = """
+            Score: \(score)
+            Start Location: \(trip.startPoint)
+            End Location: \(trip.endPoint)
+            Duration: \(convertNumberToTime(time: seconds))
+            """
+            
+            let c = Coach(coachingID: 3, title: "Ended", responseDescription: describtion, image: #imageLiteral(resourceName: "car"))
+            
+            vc2.coachModel = c
+            
             seconds = 0
+            self.timeLBL.text = "00:00"
+            self.present(vc, animated: true)
+
         })
     }
 }

@@ -142,7 +142,7 @@
             </objects>
             <point key="canvasLocation" x="2820" y="207.34632683658174"/>
         </scene>
-        <!--Saeson-->
+        <!--Season-->
         <scene sceneID="xto-pT-M3K">
             <objects>
                 <tableViewController clearsSelectionOnViewWillAppear="NO" id="Kih-1d-fni" customClass="SeasonTableViewController" customModule="DriveEye" customModuleProvider="target" sceneMemberID="viewController">
@@ -283,7 +283,7 @@
                             <outlet property="delegate" destination="Kih-1d-fni" id="yBC-XY-tAZ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Saeson" id="Yu8-gg-aFg"/>
+                    <navigationItem key="navigationItem" title="Season" id="Yu8-gg-aFg"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="njV-rP-tfc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
